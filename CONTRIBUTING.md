@@ -23,18 +23,18 @@ Arquivo: `.github/agents/customize.agent.md`
 
 Ajuda os usuários a personalizar o site al-folio:
 
-* Orienta na modificação de arquivos de configuração e conteúdo
-* Explica conceitos técnicos em linguagem simples
-* Aplica mudanças diretamente nos arquivos do repositório
-* Fornece instruções passo a passo para tarefas comuns
+- Orienta na modificação de arquivos de configuração e conteúdo
+- Explica conceitos técnicos em linguagem simples
+- Aplica mudanças diretamente nos arquivos do repositório
+- Fornece instruções passo a passo para tarefas comuns
 
 Exemplos de uso:
 
-* Alterar informações do site
-* Atualizar CV
-* Adicionar publicações
-* Criar posts de blog
-* Personalizar cores e tema
+- Alterar informações do site
+- Atualizar CV
+- Adicionar publicações
+- Criar posts de blog
+- Personalizar cores e tema
 
 Requer GitHub Copilot ativado no repositório.
 
@@ -46,10 +46,10 @@ Arquivo: `.github/agents/docs.agent.md`
 
 Responsável por manter a documentação atualizada:
 
-* Atualiza arquivos como `README.md`, `INSTALL.md`, `CUSTOMIZE.md`, `FAQ.md`, `CONTRIBUTING.md`
-* Mantém documentação sincronizada com o código
-* Escreve textos claros e objetivos
-* Segue boas práticas de documentação
+- Atualiza arquivos como `README.md`, `INSTALL.md`, `CUSTOMIZE.md`, `FAQ.md`, `CONTRIBUTING.md`
+- Mantém documentação sincronizada com o código
+- Escreve textos claros e objetivos
+- Segue boas práticas de documentação
 
 Destinado principalmente a mantenedores e contribuidores do projeto.
 
@@ -59,12 +59,12 @@ Destinado principalmente a mantenedores e contribuidores do projeto.
 
 Localizados em `.github/instructions/`, ajudam o Copilot a entender padrões do projeto:
 
-* `.github/copilot-instructions.md` – Visão geral do repositório, build, stack, estrutura e CI/CD
-* `liquid-templates.instructions.md` – Orientação para arquivos `.liquid`
-* `yaml-configuration.instructions.md` – Orientação para `_config.yml` e `_data/**/*.yml`
-* `bibtex-bibliography.instructions.md` – Orientação para arquivos `.bib` e `_bibliography/`
-* `markdown-content.instructions.md` – Orientação para conteúdo em `_books/`, `_news/`, `_pages/`, `_posts/`, `_projects/`, `_teachings/`
-* `javascript-scripts.instructions.md` – Orientação para arquivos em `_scripts/`
+- `.github/copilot-instructions.md` – Visão geral do repositório, build, stack, estrutura e CI/CD
+- `liquid-templates.instructions.md` – Orientação para arquivos `.liquid`
+- `yaml-configuration.instructions.md` – Orientação para `_config.yml` e `_data/**/*.yml`
+- `bibtex-bibliography.instructions.md` – Orientação para arquivos `.bib` e `_bibliography/`
+- `markdown-content.instructions.md` – Orientação para conteúdo em `_books/`, `_news/`, `_pages/`, `_posts/`, `_projects/`, `_teachings/`
+- `javascript-scripts.instructions.md` – Orientação para arquivos em `_scripts/`
 
 Esses arquivos evitam que o agente precise explorar todo o código para entender convenções do projeto.
 
@@ -76,11 +76,11 @@ Workflow: `.github/workflows/copilot-setup-steps.yml`
 
 Configura automaticamente dependências necessárias antes da execução dos agentes:
 
-* Ruby 3.3.5
-* Python 3.13
-* Node.js
-* ImageMagick
-* nbconvert
+- Ruby 3.3.5
+- Python 3.13
+- Node.js
+- ImageMagick
+- nbconvert
 
 ---
 
@@ -88,12 +88,12 @@ Configura automaticamente dependências necessárias antes da execução dos age
 
 Os agentes podem cometer erros. Sempre revise antes de aplicar alterações:
 
-* Revise código e configurações sugeridas
-* Teste mudanças localmente (Docker ou setup nativo)
-* Verifique sintaxe de YAML, Markdown e configurações
-* Revise documentação gerada
-* Entenda o que está sendo alterado
-* Execute o site localmente após as mudanças
+- Revise código e configurações sugeridas
+- Teste mudanças localmente (Docker ou setup nativo)
+- Verifique sintaxe de YAML, Markdown e configurações
+- Revise documentação gerada
+- Entenda o que está sendo alterado
+- Execute o site localmente após as mudanças
 
 Exemplo: ao gerar uma entrada BibTeX ou alterar configurações, confirme que a sintaxe está correta e consistente com o padrão do repositório.
 
@@ -119,10 +119,10 @@ Utilizamos GitHub Issues para bugs e solicitações de funcionalidades.
 
 Antes de abrir uma issue:
 
-* Verifique a seção FAQ no README
-* Confirme que não é duplicada
-* Certifique-se de que é um bug ou feature request
-* Use o template adequado
+- Verifique a seção FAQ no README
+- Confirme que não é duplicada
+- Certifique-se de que é um bug ou feature request
+- Use o template adequado
 
 Se for apenas uma dúvida, utilize o fórum Discussions.
 

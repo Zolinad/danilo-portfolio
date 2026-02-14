@@ -17,9 +17,9 @@ Mantém vínculo com o repositório original (`alshedivat/al-folio`), aumentando
 
 Sem problemas. Apenas:
 
-* Trabalhe em uma branch própria (ex.: `meu-site-updates`)
-* Sempre confirme que está enviando para o seu repositório
-* Não abra pull requests para `alshedivat/al-folio`, a menos que queira contribuir com melhorias gerais
+- Trabalhe em uma branch própria (ex.: `meu-site-updates`)
+- Sempre confirme que está enviando para o seu repositório
+- Não abra pull requests para `alshedivat/al-folio`, a menos que queira contribuir com melhorias gerais
 
 Para configuração rápida, consulte **QUICKSTART.md**.
 
@@ -45,10 +45,10 @@ O repositório inclui dois agentes especializados:
 
 Ajuda a personalizar seu site:
 
-* Guia passo a passo nas configurações
-* Modifica arquivos diretamente no repositório
-* Explica conceitos técnicos de forma simples
-* Auxilia com CV, publicações, blog e temas
+- Guia passo a passo nas configurações
+- Modifica arquivos diretamente no repositório
+- Explica conceitos técnicos de forma simples
+- Auxilia com CV, publicações, blog e temas
 
 Consulte **CUSTOMIZE.md → GitHub Copilot Customization Agent**.
 
@@ -56,9 +56,9 @@ Consulte **CUSTOMIZE.md → GitHub Copilot Customization Agent**.
 
 Mantém a documentação organizada:
 
-* Atualiza arquivos quando há mudanças
-* Escreve em linguagem acessível
-* Segue boas práticas de documentação
+- Atualiza arquivos quando há mudanças
+- Escreve em linguagem acessível
+- Segue boas práticas de documentação
 
 Consulte **CONTRIBUTING.md → GitHub Copilot Agents**.
 
@@ -70,13 +70,13 @@ Observação: ambos exigem assinatura do GitHub Copilot.
 
 Guias disponíveis:
 
-* Quick Start – Configure em poucos minutos
-* Instalação e Deploy – GitHub Pages e outras plataformas
-* Guia de Customização – CV, publicações, temas
-* Troubleshooting – Solução de problemas comuns
-* FAQ – Perguntas frequentes
-* Analytics – Monitoramento de visitantes
-* SEO Guide – Otimização para mecanismos de busca
+- Quick Start – Configure em poucos minutos
+- Instalação e Deploy – GitHub Pages e outras plataformas
+- Guia de Customização – CV, publicações, temas
+- Troubleshooting – Solução de problemas comuns
+- FAQ – Perguntas frequentes
+- Analytics – Monitoramento de visitantes
+- SEO Guide – Otimização para mecanismos de busca
 
 ---
 
