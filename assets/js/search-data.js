@@ -3,14 +3,14 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "about",
+    id: "nav-home",
+    title: "Home",
     section: "Navigation",
     handler: () => {
       window.location.href = "/danilo-portfolio/";
     },
-  },{id: "nav-blog",
-          title: "blog",
+  },{id: "nav-insights",
+          title: "Insights",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -58,21 +58,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/danilo-portfolio/people/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/danilo-portfolio/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/danilo-portfolio/blog/";
-              },
-            },{id: "post-a-post-with-plotly-js",
+        },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
