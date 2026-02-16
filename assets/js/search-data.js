@@ -482,11 +482,25 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/danilo-portfolio/teachings/introduction-to-machine-learning/";
             },},{
-        id: 'social-cv',
-        title: 'CV',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("/danilo-portfolio/assets/pdf/danilo_cv_cientista_de_dados.pdf", "_blank");
+          window.open("https://www.linkedin.com/in/danilo-a-fig", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/Zolinad", "_blank");
+        },
+      },{
+        id: 'social-lattes',
+        title: 'Lattes',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://lattes.cnpq.br/9122429239132988", "_blank");
         },
       },{
         id: 'social-email',
