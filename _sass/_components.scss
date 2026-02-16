@@ -119,7 +119,22 @@ ul.task-list input[type="checkbox"] {
 
 .date-column {
   width: 75px;
-  transform: translateX(-15px) translateY(-5px);
+  transform: none;
+  text-align: left !important;
+  padding-left: 0 !important;
+  display: flex;
+  align-items: flex-start;
+
+  .table-cv {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .date-column {
+    width: 100%;
+    margin-bottom: 0.35rem;
+  }
 }
 
 // Projects

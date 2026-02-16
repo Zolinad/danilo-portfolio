@@ -19,6 +19,20 @@ strong {
   color: var(--global-text-color);
 }
 
+html:not([data-theme="dark"]) {
+  strong,
+  b {
+    color: var(--global-emphasis-color);
+  }
+
+  mark {
+    color: var(--global-emphasis-color);
+    background-color: var(--global-emphasis-bg-color);
+    padding: 0.05em 0.2em;
+    border-radius: 0.2rem;
+  }
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
