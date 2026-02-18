@@ -78,6 +78,17 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1rem;
 }
 
+// Home profile image only (about layout with .post-header + article structure)
+.post .post-header + article > .profile img {
+  border-radius: 50% !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.post .post-header + article > .profile .more-info {
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;
