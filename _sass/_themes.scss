@@ -18,8 +18,8 @@
   --global-footer-link-color: #{v.$white-color};
   --global-distill-app-color: #{v.$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #eaeff2;
-  --global-cv-card-bg-color: #eaeff2;
+  --global-card-bg-color: #dee6eb;
+  --global-cv-card-bg-color: #dee6eb;
   --global-highlight-color: #{v.$red-color-dark};
   --global-emphasis-color: #084e90;
   --global-emphasis-bg-color: #{v.$burgundy-tint-color};
@@ -211,4 +211,18 @@ html[data-theme-setting="light"] {
 
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
+}
+
+/* Light-theme only: improve readability of text in light code blocks (Rouge) */
+html:not([data-theme="dark"]) {
+  .highlight .c,
+  .highlight .cm,
+  .highlight .c1,
+  .highlight .cs,
+  .highlight .go,
+  .highlight .gp,
+  .highlight .gh,
+  .highlight .gu {
+    color: #4b5563 !important;
+  }
 }
