@@ -6,12 +6,12 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #abcccc;
+  --global-bg-color: #abbecc;
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color: #2f3436;
   --global-text-color-light: #5f6668;
-  --global-theme-color: #{v.$burgundy-color};
-  --global-hover-color: #{v.$burgundy-color};
+  --global-theme-color: #084e90;
+  --global-hover-color: #084e90;
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
@@ -19,11 +19,11 @@
   --global-distill-app-color: #{v.$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{v.$white-color};
-  --global-cv-card-bg-color: #f3f5f6;
+  --global-cv-card-bg-color: #eaeff2;
   --global-highlight-color: #{v.$red-color-dark};
-  --global-emphasis-color: #{v.$burgundy-color};
+  --global-emphasis-color: #084e90;
   --global-emphasis-bg-color: #{v.$burgundy-tint-color};
-  --global-navbar-bg-color: #c4dbdb;
+  --global-navbar-bg-color: #ccd8e0;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
     #{color.channel(v.$black-color, "green", v.$space: rgb)},
