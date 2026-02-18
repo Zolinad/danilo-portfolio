@@ -2,7 +2,7 @@ cv:
   name: Danilo Azevedo Figueiredo
   label: Data Scientist
   email: daniloz.fig@gmail.com
-  location: Oriximina, PA, Brazil
+  location: Oriximiná, PA, Brazil
   image: ""
   summary: Data Scientist with a background in Control and Automation Engineering and an MBA in Data Science and Analytics. Combines 4 years of mining operations experience focused on strategy and KPIs with 2 years of university teaching in technology. Works on process improvement, ETL, analytics, and machine learning for decision support.
 
@@ -13,15 +13,15 @@ cv:
       username: Zolinad
 
   address:
-    city: Oriximina
-    region: Para
+    city: Oriximiná
+    region: Pará
     countryCode: BR
 
   sections:
     Experience:
-      - company: Federal University of Western Para (UFOPA)
+      - company: Federal University of Western Pará (UFOPA)
         position: University Professor
-        location: Oriximina, PA, Brazil
+        location: Oriximiná, PA, Brazil
         start_date: 2023-08
         end_date: 2025-07
         summary: Taught technology courses and developed practical AI and Data Science content using project-based learning.
@@ -58,7 +58,7 @@ cv:
           - Delivered georeferenced drilling projects for autonomous drilling equipment.
           - Produced field monitoring data and KPIs for performance analysis.
 
-      - company: Federal University of Para (UFPA)
+      - company: Federal University of Pará (UFPA)
         position: CNPq Research Fellow
         location: Belem, PA, Brazil
         start_date: 2013-06

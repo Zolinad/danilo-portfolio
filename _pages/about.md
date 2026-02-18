@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Oriximina, PA, Brasil</p>
+    <p>Oriximiná, PA, Brasil</p>
     <p>daniloz.fig@gmail.com</p>
     <p>+55 (91) 99107-1457</p>
 
