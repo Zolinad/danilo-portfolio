@@ -55,6 +55,176 @@ code {
   word-wrap: break-word;
 }
 
+// Theme-light-only readability tuning for Rouge and diff views.
+html:not([data-theme="dark"]) {
+  pre,
+  pre code {
+    color: #1f2a38;
+  }
+
+  :not(pre) > code {
+    color: #1f2a38;
+    border: 1px solid rgba(31, 42, 56, 0.16);
+  }
+
+  .highlight .c,
+  .highlight .cm,
+  .highlight .c1 {
+    color: #5d6673;
+    font-style: italic;
+  }
+
+  .highlight .k,
+  .highlight .kc,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .kt {
+    color: #0b3d78;
+    font-weight: 700;
+  }
+
+  .highlight .s,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .sd,
+  .highlight .s1,
+  .highlight .s2,
+  .highlight .se,
+  .highlight .sh,
+  .highlight .si,
+  .highlight .sx {
+    color: #96244a;
+  }
+
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .mo,
+  .highlight .il {
+    color: #744108;
+  }
+
+  .highlight .nf {
+    color: #0d5c96;
+    font-weight: 700;
+  }
+
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi {
+    color: #144d83;
+  }
+
+  .d2h-file-wrapper,
+  .d2h-file-header {
+    border-color: #3e4752 !important;
+  }
+
+  .d2h-file-header {
+    background-color: #2f3742 !important;
+    color: #d7dce3 !important;
+  }
+
+  .d2h-file-name,
+  .d2h-file-name a,
+  .d2h-file-stats,
+  .d2h-file-collapse,
+  .d2h-file-collapse input {
+    color: #eaf1fb !important;
+    opacity: 1 !important;
+  }
+
+  .d2h-diff-table {
+    color: #d7dce3 !important;
+    background-color: #2a313a;
+  }
+
+  .d2h-code-line,
+  .d2h-code-side-line,
+  .d2h-code-line-ctn,
+  .d2h-code-linenumber {
+    color: #d7dce3 !important;
+  }
+
+  .d2h-code-line-ctn .hljs,
+  .d2h-code-side-line .hljs {
+    color: #d7dce3 !important;
+  }
+
+  .d2h-code-line-ctn .hljs *,
+  .d2h-code-side-line .hljs *,
+  .d2h-code-line-ctn span,
+  .d2h-code-side-line span {
+    opacity: 1 !important;
+  }
+
+  .d2h-code-linenumber,
+  .d2h-code-side-linenumber,
+  .d2h-code-linenumber *,
+  .d2h-code-side-linenumber *,
+  .d2h-code-linenumber a,
+  .d2h-code-side-linenumber a {
+    background-color: #26303a !important;
+    color: #eef4ff !important;
+    opacity: 1 !important;
+    font-weight: 600;
+  }
+
+  .d2h-info {
+    background-color: #3a4450 !important;
+    color: #d7dce3 !important;
+  }
+
+  .d2h-del {
+    background-color: #4a242c !important;
+  }
+
+  .d2h-ins {
+    background-color: #213d2f !important;
+  }
+
+  .d2h-del .d2h-code-line-ctn,
+  .d2h-del .d2h-code-linenumber {
+    color: #ffd7de !important;
+  }
+
+  .d2h-ins .d2h-code-line-ctn,
+  .d2h-ins .d2h-code-linenumber {
+    color: #d7f8e3 !important;
+  }
+
+  .d2h-del .d2h-code-linenumber,
+  .d2h-del .d2h-code-side-linenumber {
+    color: #ffc4cf !important;
+  }
+
+  .d2h-ins .d2h-code-linenumber,
+  .d2h-ins .d2h-code-side-linenumber {
+    color: #baf3cf !important;
+  }
+
+  .d2h-del .d2h-code-linenumber,
+  .d2h-ins .d2h-code-linenumber {
+    background-color: inherit !important;
+  }
+
+  .d2h-code-line del,
+  .d2h-code-side-line del {
+    background-color: #7b3b49 !important;
+    color: #ffe8ec !important;
+  }
+
+  .d2h-code-line ins,
+  .d2h-code-side-line ins {
+    background-color: #2f6f49 !important;
+    color: #eafff1 !important;
+  }
+}
+
 // Progress bars
 
 progress {
