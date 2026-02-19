@@ -223,6 +223,38 @@ html:not([data-theme="dark"]) {
     background-color: #2f6f49 !important;
     color: #eafff1 !important;
   }
+
+  // Robust overrides: beat CDN diff2html/highlightjs order in production.
+  .d2h-diff-table .d2h-code-line,
+  .d2h-diff-table .d2h-code-side-line,
+  .d2h-diff-table .d2h-code-line-ctn,
+  .d2h-diff-table .d2h-code-linenumber,
+  .d2h-diff-table .d2h-code-side-linenumber {
+    background-color: #2a313a !important;
+    color: #d7dce3 !important;
+  }
+
+  .d2h-diff-table .d2h-code-line-ctn .hljs,
+  .d2h-diff-table .d2h-code-side-line .hljs,
+  .d2h-diff-table .d2h-code-line-ctn .hljs *,
+  .d2h-diff-table .d2h-code-side-line .hljs *,
+  .d2h-diff-table .d2h-code-line-ctn span,
+  .d2h-diff-table .d2h-code-side-line span {
+    color: inherit !important;
+    opacity: 1 !important;
+  }
+
+  .d2h-diff-table .d2h-del,
+  .d2h-diff-table .d2h-del .d2h-code-line,
+  .d2h-diff-table .d2h-del .d2h-code-side-line {
+    background-color: #4a242c !important;
+  }
+
+  .d2h-diff-table .d2h-ins,
+  .d2h-diff-table .d2h-ins .d2h-code-line,
+  .d2h-diff-table .d2h-ins .d2h-code-side-line {
+    background-color: #213d2f !important;
+  }
 }
 
 // Progress bars
