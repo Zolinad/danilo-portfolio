@@ -2,7 +2,8 @@
 layout: about
 title: Home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Olá, visitante! 
 
 profile:
   align: right
@@ -30,6 +31,8 @@ latest_posts:
 Sou cientista de dados com formação em Engenharia de Controle e Automação e MBA em Data Science & Analytics. Minha trajetória combina experiência em operações de mineração, com foco em estratégia e indicadores, e atuação em docência na área de tecnologia.
 
 Gosto de transformar problemas reais em soluções práticas: automação, ETL, análise de dados, construção de KPIs e aplicações de machine learning para apoiar decisões com mais clareza e agilidade.
+
+Neste site você vai encontrar alguns projetos de minha autoria, postagens sobre experiências acadêmicas/profissionais e o meu currículo. Confira mais abaixo minhas outras redes e formas de contato.
 
 <div class="home-skill-grid" aria-label="Core skills">
   <div class="row g-2 g-sm-3">
