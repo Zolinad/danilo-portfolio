@@ -6,7 +6,7 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #abbecc;
+  --global-bg-color: #8ba5b9; //#abbecc antes
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color: #2f3436;
   --global-text-color-light: #5f6668;
@@ -23,7 +23,7 @@
   --global-highlight-color: #{v.$red-color-dark};
   --global-emphasis-color: #084e90;
   --global-emphasis-bg-color: #{v.$burgundy-tint-color};
-  --global-navbar-bg-color: #ccd8e0;
+  --global-navbar-bg-color: #bcccd6; //#ccd8e0 antes
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
     #{color.channel(v.$black-color, "green", v.$space: rgb)},
@@ -224,5 +224,96 @@ html:not([data-theme="dark"]) {
   .highlight .gh,
   .highlight .gu {
     color: #4b5563 !important;
+  }
+}
+
+/* Dark-theme syntax highlighting (Monokai-inspired) */
+html[data-theme="dark"] {
+  pre,
+  pre code {
+    color: #f8f8f2;
+  }
+
+  :not(pre) > code {
+    color: #f8f8f2;
+    border: 1px solid rgba(248, 248, 242, 0.12);
+  }
+
+  .highlight .c,
+  .highlight .cm,
+  .highlight .c1,
+  .highlight .cs,
+  .highlight .go,
+  .highlight .gp,
+  .highlight .gh,
+  .highlight .gu {
+    color: #75715e !important;
+    font-style: italic;
+  }
+
+  .highlight .k,
+  .highlight .kc,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .kt,
+  .highlight .o,
+  .highlight .ow {
+    color: #f92672 !important;
+    font-weight: 600;
+  }
+
+  .highlight .s,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .sd,
+  .highlight .s1,
+  .highlight .s2,
+  .highlight .se,
+  .highlight .sh,
+  .highlight .si,
+  .highlight .sx,
+  .highlight .sr,
+  .highlight .ss {
+    color: #e6db74 !important;
+  }
+
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .mo,
+  .highlight .il {
+    color: #ae81ff !important;
+  }
+
+  .highlight .nf,
+  .highlight .na,
+  .highlight .nc,
+  .highlight .ne {
+    color: #a6e22e !important;
+    font-weight: 600;
+  }
+
+  .highlight .nb,
+  .highlight .bp,
+  .highlight .no,
+  .highlight .nd,
+  .highlight .ni,
+  .highlight .nt,
+  .highlight .nx {
+    color: #66d9ef !important;
+  }
+
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi {
+    color: #fd971f !important;
+  }
+
+  .highlight .w {
+    color: #f8f8f2 !important;
   }
 }

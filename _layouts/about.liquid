@@ -67,7 +67,65 @@ layout: default
     <!-- Social -->
     {% if page.social %}
       <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
+        <div class="contact-icons contact-icons-custom">
+          {% assign socials = site.data.socials %}
+
+          {% if socials.linkedin_username %}
+            <a
+              href="https://www.linkedin.com/in/{{ socials.linkedin_username }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn @{{ socials.linkedin_username }}"
+              data-contact-label="@{{ socials.linkedin_username }}"
+            >
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+
+          {% if socials.github_username %}
+            <a
+              href="https://github.com/{{ socials.github_username }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub @{{ socials.github_username }}"
+              data-contact-label="@{{ socials.github_username }}"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+
+          {% if socials.lattes_id %}
+            <a
+              href="http://lattes.cnpq.br/{{ socials.lattes_id }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lattes"
+              data-contact-label="Lattes"
+            >
+              <i class="ai ai-lattes" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+
+          <a
+            href="https://wa.me/5591991071457"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp +55 (91) 99107-1457"
+            data-contact-label="+55 (91) 99107-1457"
+          >
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          </a>
+
+          {% if socials.email %}
+            <a
+              href="mailto:{{ socials.email }}"
+              aria-label="Email {{ socials.email }}"
+              data-contact-label="{{ socials.email }}"
+            >
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+        </div>
 
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>

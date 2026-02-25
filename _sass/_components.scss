@@ -241,6 +241,58 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.social .contact-icons.contact-icons-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.1rem;
+    min-height: 4.1rem;
+  }
+
+  a[data-contact-label]::after {
+    content: attr(data-contact-label);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.35rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: 0.35rem;
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+    border: 1px solid var(--global-divider-color);
+    font-size: 0.7rem;
+    line-height: 1.1;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 120ms ease;
+    z-index: 5;
+  }
+
+  a[data-contact-label]:hover::after,
+  a[data-contact-label]:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .social .contact-icons.contact-icons-custom a {
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+  }
+}
+
 .wechat-modal {
   display: none;
   position: fixed;

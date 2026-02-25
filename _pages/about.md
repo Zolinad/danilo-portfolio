@@ -3,16 +3,16 @@ layout: about
 title: Home
 permalink: /
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-subtitle: Olá, visitante! 
+subtitle: Bem-vindo, visitante! 
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Oriximiná, PA, Brasil</p>
+    <p>Oriximiná / Belém, PA, Brasil</p>
     <p>daniloz.fig@gmail.com</p>
-    <p>+55 (91) 99107-1457</p>
+# <p><i class="fa-brands fa-whatsapp fa-lg" aria-hidden="true"></i> +55 (91) 99107-1457</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -32,7 +32,7 @@ Sou cientista de dados com formação em Engenharia de Controle e Automação e 
 
 Gosto de transformar problemas reais em soluções práticas: automação, ETL, análise de dados, construção de KPIs e aplicações de machine learning para apoiar decisões com mais clareza e agilidade.
 
-Neste site você vai encontrar alguns projetos de minha autoria, postagens sobre experiências acadêmicas/profissionais e o meu currículo. Confira mais abaixo minhas outras redes e formas de contato.
+Neste site você vai encontrar alguns projetos de minha autoria, postagens sobre experiências acadêmicas/profissionais e o meu currículo. Veja abaixo minhas outras redes e formas de contato.
 
 <div class="home-skill-grid" aria-label="Core skills">
   <div class="row g-2 g-sm-3">
