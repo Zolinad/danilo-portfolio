@@ -27,8 +27,35 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Data Scientist with a background in Control and Automation Engineering and an MBA in Data Science and Analytics. I combine mining operations experience focused on strategy and KPIs with university teaching in technology, delivering projects in process improvement, ETL, analytics, and machine learning for decision support.
+Sou cientista de dados com formação em Engenharia de Controle e Automação e MBA em Data Science & Analytics. Minha trajetória combina experiência em operações de mineração, com foco em estratégia e indicadores, e atuação em docência na área de tecnologia.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Gosto de transformar problemas reais em soluções práticas: automação, ETL, análise de dados, construção de KPIs e aplicações de machine learning para apoiar decisões com mais clareza e agilidade.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<div class="home-skill-grid" aria-label="Core skills">
+  <div class="row g-2 g-sm-3">
+    <div class="col-6 col-md-3">
+      <div class="home-skill-item">
+        <i class="fa-solid fa-database" aria-hidden="true"></i>
+        <span>DATA</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="home-skill-item">
+        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+        <span>ANALYTICS</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="home-skill-item">
+        <i class="fa-solid fa-brain" aria-hidden="true"></i>
+        <span>MACHINE LEARNING</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="home-skill-item">
+        <i class="fa-solid fa-award" aria-hidden="true"></i>
+        <span>GREEN BELT</span>
+      </div>
+    </div>
+  </div>
+</div>

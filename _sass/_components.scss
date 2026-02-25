@@ -271,6 +271,63 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Home intro skill grid (about page)
+
+.home-skill-grid {
+  margin: 1.1rem 0 1.4rem;
+
+  .home-skill-item {
+    min-height: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0.5rem 0.35rem;
+    transition: transform 120ms ease;
+
+    i {
+      font-size: 2.1rem;
+      line-height: 1;
+      color: var(--global-text-color);
+    }
+
+    span {
+      font-size: 0.78rem;
+      line-height: 1.15;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--global-text-color);
+      text-wrap: balance;
+    }
+  }
+
+  .home-skill-item:hover {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-skill-grid .home-skill-item {
+    min-height: 96px;
+
+    i {
+      font-size: 1.85rem;
+    }
+
+    span {
+      font-size: 0.74rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-skill-grid .home-skill-item {
+    transition: none;
+  }
+}
+
 // Distill
 
 .distill {
