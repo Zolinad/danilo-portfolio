@@ -8,8 +8,8 @@
   color-scheme: light;
   --global-bg-color: #8ba5b9; //#abbecc antes
   --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #2f3436;
-  --global-text-color-light: #5f6668;
+  --global-text-color: #1f2528;
+  --global-text-color-light: #465057;
   --global-theme-color: #084e90;
   --global-hover-color: #084e90;
   --global-hover-text-color: #{v.$white-color};
@@ -18,8 +18,10 @@
   --global-footer-link-color: #{v.$white-color};
   --global-distill-app-color: #{v.$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #dee6eb;
-  --global-cv-card-bg-color: #dee6eb;
+  //--global-card-bg-color: #dee6eb; //antes
+  --global-card-bg-color: #cedae1;
+  //--global-cv-card-bg-color: #dee6eb; //antes
+  --global-cv-card-bg-color: #cedae1;
   --global-highlight-color: #{v.$red-color-dark};
   --global-emphasis-color: #084e90;
   --global-emphasis-bg-color: #{v.$burgundy-tint-color};
