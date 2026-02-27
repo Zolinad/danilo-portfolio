@@ -69,3 +69,10 @@ Se você quer mostrar maturidade em analytics, documente para cada KPI:
 - exemplo de decisão tomada com base nele.
 
 Esse nível de clareza é o que diferencia painel decorativo de painel de gestão.
+
+## Referências
+
+- [NIST/SEMATECH e-Handbook - What are control charts?](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc3.htm)
+- [ASQ - What is Six Sigma?](https://asq.org/quality-resources/six-sigma)
+- [Google SRE Book - Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
+- [Power BI guidance - KPI visuals](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-kpi)

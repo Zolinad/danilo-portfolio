@@ -59,3 +59,10 @@ Evite avaliar só com métrica acadêmica isolada. Em produção, acompanhe:
 Em detecção de anomalias, o ganho real vem de um pipeline de decisão bem desenhado, não apenas de um algoritmo "mais sofisticado".
 
 Modelos ajudam a priorizar. A operação decide. O sucesso está no acoplamento entre os dois.
+
+## Referências
+
+- [Isolation Forest (Liu, Ting, Zhou - 2008)](https://ieeexplore.ieee.org/document/4781136)
+- [Scikit-learn - IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
+- [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework)
+- [Google SRE Book - Alerting on Symptoms](https://sre.google/sre-book/practical-alerting/)

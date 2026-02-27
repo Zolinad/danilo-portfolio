@@ -25,6 +25,7 @@ Publicar conteúdos técnicos acessíveis com foco em decisão, impacto operacio
 5. Trade-offs e limitações
 6. Checklist de execução
 7. Próximos passos
+8. Referências (3 a 8 fontes que mais contribuíram para o post)
 
 ## 10 ideias fortes (ângulo + CTA)
 

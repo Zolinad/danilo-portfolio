@@ -69,3 +69,10 @@ O desenho ideal depende do impacto da decisão que o dado suporta.
 - Trate qualidade de dados como requisito de produto, não como tarefa extra.
 
 Quando o ETL é desenhado com foco em decisão, analytics deixa de ser "relatório tardio" e vira capacidade operacional.
+
+## Referências
+
+- [The Data Warehouse Toolkit (Kimball)](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/)
+- [dbt - What is ELT?](https://www.getdbt.com/blog/what-is-elt)
+- [Apache Airflow Documentation](https://airflow.apache.org/docs/)
+- [Great Expectations Documentation](https://docs.greatexpectations.io/)
