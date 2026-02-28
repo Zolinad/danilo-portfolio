@@ -7,7 +7,7 @@ Cientista de Dados com base em Engenharia de Controle e Automação, experiênci
 ## Diretrizes ativas de conteúdo
 
 - `role evolution` é a base de escrita (primeira pessoa, voz ativa, lente de recrutador).
-- `CONTENT POSITIONING MODE` é obrigatório para novos Insights:
+- `00-content-positioning-mode.md` é obrigatório para novos Insights:
   - sempre propor 3 temas;
   - sempre oferecer 2 abordagens (Experiencial e Técnica-Universal);
   - escolha final de tema, abordagem e personalidade é sua.
@@ -22,13 +22,15 @@ Cientista de Dados com base em Engenharia de Controle e Automação, experiênci
 
 ## Estado atual de publicação
 
-### Insights publicados (5)
+### Insights publicados (7)
 
 1. `_posts/2026-02-26-kpi-bonito-nao-paga-conta.md`
 2. `_posts/2026-02-26-etl-para-decisao-operacional.md`
 3. `_posts/2026-02-26-anomalia-sem-fadiga-de-alerta.md`
 4. `_posts/2026-02-28-transf_dados_basico_avancado.md`
 5. `_posts/2026-02-28-terminal_linux_basic.md`
+6. `_posts/2026-02-28-docker-intro.md`
+7. `_posts/2026-02-28-git-intro.md`
 
 ### Projects publicados (2)
 
@@ -41,13 +43,13 @@ Classificação atual:
 
 - Experiencial: 3
   - KPI, ETL, Anomalias
-- Técnica-Universal: 2
-  - Transformação de dados, Terminal Linux
+- Técnica-Universal: 4
+  - Transformação de dados, Terminal Linux, Docker, Git/GitHub
 
 Distribuição atual:
 
-- Experiencial: 60%
-- Técnica-Universal: 40%
+- Experiencial: 43%
+- Técnica-Universal: 57%
 
 Status: dentro da faixa-alvo (40–60% / 40–60%).
 
