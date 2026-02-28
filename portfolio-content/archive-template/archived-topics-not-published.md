@@ -17,4 +17,4 @@ Este arquivo registra conteúdos que devem permanecer arquivados e fora da seç�
 
 - Se esses materiais forem reutilizados, devem ser reescritos e reposicionados conforme:
   - `portfolio-content/00-role-evolution.md`
-  - `portfolio-content/CONTENT POSITIONING MODE.md`
+  - `portfolio-content/00-content-positioning-mode.md`

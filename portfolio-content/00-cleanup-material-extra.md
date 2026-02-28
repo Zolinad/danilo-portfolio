@@ -17,9 +17,12 @@ Objetivo: separar conteúdo que fortalece a marca profissional do que é apenas 
 
 ### Arquivos de estratégia interna
 
+- `portfolio-content/00-role-evolution.md`
+- `portfolio-content/00-content-positioning-mode.md`
 - `portfolio-content/01-mapa-portfolio.md`
 - `portfolio-content/02-insights-arquitetura.md`
 - `portfolio-content/03-projects-arquitetura.md`
+- `portfolio-content/04-artigos-arquitetura.md`
 
 ## 2) Arquivar (recomendado)
 
