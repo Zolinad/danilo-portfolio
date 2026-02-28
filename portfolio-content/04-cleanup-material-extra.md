@@ -59,6 +59,12 @@ Conteúdo útil como referência técnica, mas que não deve aparecer no site fi
 - `_posts/2024-12-04-photo-gallery.md`
 - `_posts/2025-03-26-plotly.md`
 
+### Conteúdos adicionais para manter arquivados (não publicar)
+
+- `Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra`
+- `Displaying External Posts on Your al-folio Blog`
+- Registro interno: `portfolio-content/archive-template/archived-topics-not-published.md`
+
 ### Projetos de demonstração
 
 - `_projects/1_project.md`
