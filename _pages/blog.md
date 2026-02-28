@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: Insights
+title: Artigos e Insights
 nav: true
 nav_order: 1
 pagination:
@@ -19,7 +19,7 @@ pagination:
 <div class="post">
 
   <div class="header-bar">
-    <h1>Insights</h1>
+    <h1>Artigos e Insights</h1>
     <h2>a space for articles, research, technical advices and story telling</h2>
   </div>
 
