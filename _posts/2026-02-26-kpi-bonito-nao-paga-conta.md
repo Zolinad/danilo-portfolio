@@ -7,13 +7,13 @@ tags: [kpi, analytics-strategy, industrial-operations, six-sigma]
 categories: insights
 ---
 
-Em ambientes operacionais, um dashboard pode ser visualmente excelente e, ainda assim, não ajudar ninguém a decidir melhor.
+Na minha experiência em operações, um dashboard pode ser visualmente excelente e, ainda assim, não ajudar ninguém a decidir melhor.
 
-O ponto central é simples: um KPI só é útil quando reduz incerteza em uma decisão concreta.
+O ponto central para mim é simples: um KPI só é útil quando reduz incerteza em uma decisão concreta.
 
 ## O erro mais comum
 
-Muitos indicadores são escolhidos por disponibilidade de dados, não por relevância de negócio. O resultado é um painel com métricas descritivas, mas com baixa utilidade decisória.
+Eu vejo com frequência indicadores escolhidos por disponibilidade de dados, e não por relevância de negócio. O resultado é um painel com métricas descritivas, mas com baixa utilidade decisória.
 
 Exemplos típicos:
 
@@ -23,7 +23,7 @@ Exemplos típicos:
 
 ## Um critério prático para avaliar KPI
 
-Antes de publicar um indicador, faça quatro perguntas:
+Antes de publicar um indicador, faço quatro perguntas:
 
 1. **Qual decisão esse KPI influencia?**
 2. **Qual ação é tomada quando ele sai da faixa esperada?**
@@ -31,6 +31,16 @@ Antes de publicar um indicador, faça quatro perguntas:
 4. **Qual trade-off ele representa?** (ex.: produtividade vs. qualidade)
 
 Se não houver resposta clara para as quatro perguntas, o KPI ainda não está maduro.
+
+## Um modelo simples para priorização
+
+Quando preciso priorizar KPIs, uso uma função de utilidade com pesos explícitos:
+
+$$
+U(KPI) = w_1 \cdot Impacto + w_2 \cdot Acionabilidade - w_3 \cdot Latencia
+$$
+
+Com isso, a conversa deixa de ser "qual gráfico ficou mais bonito" e vira "qual indicador melhora decisão com menor atraso".
 
 ## Enquadramento Lean/Six Sigma
 
@@ -44,7 +54,7 @@ Isso evita o ciclo de "medir tudo" e ajuda a medir o que realmente importa.
 
 ## Caso aplicado (contexto industrial)
 
-Na prática, indicadores em níveis hierárquicos (estratégico, tático, operacional) tendem a funcionar melhor porque cada camada responde a uma pergunta diferente:
+Em projetos que conduzi, indicadores em níveis hierárquicos (estratégico, tático, operacional) funcionaram melhor porque cada camada responde a uma pergunta diferente:
 
 - **Estratégico:** estamos evoluindo na direção correta?
 - **Tático:** onde estão os maiores desvios?
@@ -52,11 +62,31 @@ Na prática, indicadores em níveis hierárquicos (estratégico, tático, operac
 
 Essa arquitetura reduz ruído e acelera resposta.
 
+```python
+# Exemplo simples de monitoramento de desvio em Python
+desvio = (valor_atual - meta) / meta
+if desvio < -0.05:
+    acao = "intervencao_imediata"
+elif desvio < -0.02:
+    acao = "plano_tatico"
+else:
+    acao = "manter_roteiro"
+```
+
 ## Limitações e cuidados
 
-- KPI sem qualidade de dado vira ruído com aparência de precisão.
-- KPI sem rito de revisão tende a envelhecer rápido.
+- KPI sem qualidade de dado vira ruído com aparência de precisão;
+- KPI sem rito de revisão tende a envelhecer rápido;
 - KPI isolado pode incentivar otimização local e piorar o sistema como um todo.
+
+## O que isso demonstra sobre minha atuação
+
+- Eu conecto modelagem de indicadores com decisão de negócio, não com estética de dashboard.
+- Eu explicito trade-offs para evitar otimização local.
+- Eu estruturo governança (meta, dono, frequência e ação) para sustentar resultado no tempo.
+
+[INSERIR IMAGEM: exemplo de dashboard hierárquico com níveis estratégico, tático e operacional.]
+[SUGESTÃO DE INFOGRÁFICO: fluxo "KPI -> decisão -> ação -> resultado -> revisão".]
 
 ## Próximos passos para seu portfólio
 

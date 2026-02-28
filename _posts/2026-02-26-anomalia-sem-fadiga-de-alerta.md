@@ -7,46 +7,60 @@ tags: [anomaly-detection, unsupervised-learning, risk-analytics, scikit-learn]
 categories: insights
 ---
 
-Detectar anomalias parece simples: treinar modelo, gerar score, enviar alerta. Na prática, esse fluxo costuma quebrar quando o time recebe alertas demais e para de confiar no sistema.
+Quando eu trabalho com detecção de anomalias, o erro mais comum é tratar o projeto como um problema só de modelagem. Para mim, o ponto central é decisão operacional.
 
-O desafio não é só modelagem. É desenho de decisão.
+Treinar modelo, gerar score e enviar alerta parece simples. O fluxo quebra quando o time recebe alertas demais e deixa de confiar no sistema.
 
-## Por que a maioria dos projetos degrada
+## Por que muitos projetos degradam
 
-Três causas recorrentes:
+As causas recorrentes que observo:
 
 - limiar de alerta definido sem custo de erro;
 - ausência de priorização por risco;
 - feedback humano não incorporado ao ciclo.
 
-Sem isso, o modelo pode até ter bom desempenho técnico e ainda assim fracassar operacionalmente.
+Sem isso, o modelo pode ir bem tecnicamente e ainda fracassar operacionalmente.
 
 ## Estrutura mínima para funcionar
 
 1. **Score de anomalia**
    - modelo não supervisionado (ex.: Isolation Forest);
    - score contínuo por evento.
-
 2. **Regras de priorização**
    - combinar score com contexto de negócio (valor, criticidade, histórico);
    - classificar em níveis de risco.
-
 3. **Fila de investigação**
    - ordenar casos por risco esperado;
    - definir SLA por faixa.
-
 4. **Ciclo de aprendizagem**
    - registrar decisão do analista;
    - recalibrar limiares e regras.
 
+## Função de risco operacional
+
+Para priorização, eu costumo combinar score técnico e impacto de negócio:
+
+$$
+Risco = Score_{anomalia} \times Impacto_{financeiro} \times Criticidade_{processo}
+$$
+
+Isso me ajuda a levar primeiro os casos com maior perda esperada, em vez dos casos apenas "mais estranhos" estatisticamente.
+
 ## Métricas certas
 
-Evite avaliar só com métrica acadêmica isolada. Em produção, acompanhe:
+Evito avaliar só com métrica acadêmica isolada. Em produção, acompanho:
 
 - precisão dos alertas críticos;
 - taxa de investigação útil;
 - tempo médio até triagem;
 - redução de perda/risco estimado.
+
+```python
+df["risco"] = (
+    df["score_anomalia"] * df["impacto_financeiro"] * df["criticidade"]
+)
+fila = df.sort_values("risco", ascending=False).head(100)
+```
 
 ## Limitações que precisam ser explícitas
 
@@ -54,9 +68,18 @@ Evite avaliar só com métrica acadêmica isolada. Em produção, acompanhe:
 - drift de comportamento exige recalibração periódica;
 - sem governança de dados, o modelo degrada silenciosamente.
 
+## O que isso demonstra sobre minha atuação
+
+- Eu conecto modelagem não supervisionada com priorização de investigação real.
+- Eu desenho mecanismo de feedback para evolução contínua do sistema.
+- Eu traduzo métrica técnica em impacto de risco para apoiar decisão executiva.
+
+[INSERIR IMAGEM: matriz 2x2 de risco (probabilidade x impacto) com distribuição dos alertas.]
+[SUGESTÃO DE INFOGRÁFICO: pipeline "dados -> score -> priorização -> investigação -> feedback".]
+
 ## Conclusão
 
-Em detecção de anomalias, o ganho real vem de um pipeline de decisão bem desenhado, não apenas de um algoritmo "mais sofisticado".
+Em detecção de anomalias, o ganho real vem de um pipeline de decisão bem desenhado, não apenas de um algoritmo mais sofisticado.
 
 Modelos ajudam a priorizar. A operação decide. O sucesso está no acoplamento entre os dois.
 

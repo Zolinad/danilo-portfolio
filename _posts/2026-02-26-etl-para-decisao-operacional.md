@@ -7,13 +7,13 @@ tags: [etl, data-engineering, python, sql, decision-support]
 categories: insights
 ---
 
-Quando a operação diz que "o dado não chegou a tempo", o problema raramente é só tecnologia. Na maioria dos casos, é desenho de processo.
+Quando eu escuto que "o dado não chegou a tempo", quase sempre o problema não é só tecnologia. Na maioria dos casos, é desenho de processo.
 
-ETL bom não é o que roda sem erro. É o que entrega informação confiável no momento em que a decisão ainda pode mudar o resultado.
+ETL bom, para mim, não é o que roda sem erro. É o que entrega informação confiável quando a decisão ainda pode mudar o resultado.
 
 ## Onde os pipelines falham
 
-Os gargalos mais frequentes em contextos operacionais são:
+Os gargalos mais frequentes que encontro em contextos operacionais são:
 
 - regras de negócio implícitas e não versionadas;
 - múltiplas fontes com definições diferentes para a mesma métrica;
@@ -27,22 +27,29 @@ Uma referência prática para ETL orientado a decisão:
 1. **Ingestão controlada**
    - rastreabilidade por lote;
    - checagem de esquema e tipos.
-
 2. **Camada de padronização**
    - nomenclatura única;
    - tratamento de faltantes e duplicidades.
-
 3. **Camada de regras de negócio**
    - métricas calculadas com versionamento;
    - testes para fórmulas críticas.
-
 4. **Publicação para consumo**
    - dataset final para BI/analytics;
    - documentação mínima de colunas e regras.
 
+## Equação de latência decisória
+
+Eu acompanho uma métrica simples para saber se meu pipeline está ajudando de fato:
+
+$$
+\Delta_{decisao} = t_{disponibilizacao} - t_{evento}
+$$
+
+Quanto menor o $\Delta_{decisao}$, maior a chance de intervenção útil.
+
 ## Métricas do próprio pipeline (meta-KPIs)
 
-Se você não mede o ETL, ele vira caixa-preta. Monitore pelo menos:
+Se eu não meço ETL, ele vira caixa-preta. Eu monitoro pelo menos:
 
 - **freshness** (atualização);
 - **completude**;
@@ -50,7 +57,15 @@ Se você não mede o ETL, ele vira caixa-preta. Monitore pelo menos:
 - **taxa de falha por etapa**;
 - **tempo total de processamento**.
 
-Esses indicadores são essenciais para confiança do usuário final.
+```python
+meta_kpis = {
+    "freshness_min": freshness_min,
+    "completude_pct": completude_pct,
+    "falha_etapas_pct": falha_pct,
+    "tempo_total_min": tempo_total,
+}
+status = "ok" if meta_kpis["completude_pct"] >= 98 else "alerta"
+```
 
 ## Trade-offs reais
 
@@ -62,13 +77,22 @@ Sempre há escolhas:
 
 O desenho ideal depende do impacto da decisão que o dado suporta.
 
+## O que isso demonstra sobre minha atuação
+
+- Eu projeto pipeline com foco em decisão operacional, não só em ingestão.
+- Eu conecto engenharia de dados com SLA de negócio.
+- Eu transformo regras críticas em código testável para reduzir ambiguidade.
+
+[INSERIR IMAGEM: arquitetura em camadas de ETL com ingestão, padronização, regras e consumo.]
+[SUGESTÃO DE INFOGRÁFICO: linha do tempo "evento -> ETL -> disponibilização -> decisão" com janela útil.]
+
 ## Lições práticas
 
 - Comece pelo problema de negócio, não pela ferramenta.
 - Documente regra crítica como código e teste.
 - Trate qualidade de dados como requisito de produto, não como tarefa extra.
 
-Quando o ETL é desenhado com foco em decisão, analytics deixa de ser "relatório tardio" e vira capacidade operacional.
+Quando o ETL é desenhado com foco em decisão, analytics deixa de ser relatório tardio e vira capacidade operacional.
 
 ## Referências
 
