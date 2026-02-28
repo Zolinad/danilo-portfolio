@@ -68,11 +68,11 @@ fila = df.sort_values("risco", ascending=False).head(100)
 - drift de comportamento exige recalibração periódica;
 - sem governança de dados, o modelo degrada silenciosamente.
 
-## O que isso demonstra sobre minha atuação
+## Lições práticas para times de dados
 
-- Eu conecto modelagem não supervisionada com priorização de investigação real.
-- Eu desenho mecanismo de feedback para evolução contínua do sistema.
-- Eu traduzo métrica técnica em impacto de risco para apoiar decisão executiva.
+- Conectar modelagem não supervisionada com priorização de investigação real.
+- Desenhar mecanismo de feedback para evolução contínua do sistema.
+- Traduzir métrica técnica em impacto de risco para apoiar decisão executiva.
 
 [INSERIR IMAGEM: matriz 2x2 de risco (probabilidade x impacto) com distribuição dos alertas.]
 [SUGESTÃO DE INFOGRÁFICO: pipeline "dados -> score -> priorização -> investigação -> feedback".]

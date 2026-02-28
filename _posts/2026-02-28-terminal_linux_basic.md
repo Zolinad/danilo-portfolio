@@ -83,11 +83,11 @@ Isso ajuda a separar ruído de problema que realmente exige intervenção imedia
 - criar backup rápido antes de mudança crítica;
 - registrar comandos relevantes para repetibilidade.
 
-## O que isso demonstra sobre minha atuação
+## Lições práticas para times de dados
 
-- Eu valorizo base operacional sólida para sustentar velocidade com segurança.
-- Eu conecto uso de terminal com diagnóstico orientado a impacto.
-- Eu estruturo execução para reduzir erro humano em ambientes críticos.
+- Valorizar base operacional sólida para sustentar velocidade com segurança.
+- Conectar uso de terminal com diagnóstico orientado a impacto.
+- Estruturar execução para reduzir erro humano em ambientes críticos.
 
 [INSERIR IMAGEM: mapa da árvore de diretórios Linux com destaque para /etc, /var, /home e /usr.]
 [SUGESTÃO DE INFOGRÁFICO: fluxo de troubleshooting em terminal (sintoma -> diagnóstico -> ação -> validação).]

@@ -79,11 +79,11 @@ else:
 - KPI sem rito de revisão tende a envelhecer rápido;
 - KPI isolado pode incentivar otimização local e piorar o sistema como um todo.
 
-## O que isso demonstra sobre minha atuação
+## Lições práticas para times de dados
 
-- Eu conecto modelagem de indicadores com decisão de negócio, não com estética de dashboard.
-- Eu explicito trade-offs para evitar otimização local.
-- Eu estruturo governança (meta, dono, frequência e ação) para sustentar resultado no tempo.
+- Conectar modelagem de indicadores com decisão de negócio, não com estética de dashboard.
+- Explicitar trade-offs para evitar otimização local.
+- Estruturar governança (meta, dono, frequência e ação) para sustentar resultado no tempo.
 
 [INSERIR IMAGEM: exemplo de dashboard hierárquico com níveis estratégico, tático e operacional.]
 [SUGESTÃO DE INFOGRÁFICO: fluxo "KPI -> decisão -> ação -> resultado -> revisão".]

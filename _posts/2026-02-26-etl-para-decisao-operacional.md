@@ -77,11 +77,11 @@ Sempre há escolhas:
 
 O desenho ideal depende do impacto da decisão que o dado suporta.
 
-## O que isso demonstra sobre minha atuação
+## Lições práticas para times de dados
 
-- Eu projeto pipeline com foco em decisão operacional, não só em ingestão.
-- Eu conecto engenharia de dados com SLA de negócio.
-- Eu transformo regras críticas em código testável para reduzir ambiguidade.
+- Projetar pipeline com foco em decisão operacional, não só em ingestão.
+- Conectar engenharia de dados com SLA de negócio.
+- Transformar regras críticas em código testável para reduzir ambiguidade.
 
 [INSERIR IMAGEM: arquitetura em camadas de ETL com ingestão, padronização, regras e consumo.]
 [SUGESTÃO DE INFOGRÁFICO: linha do tempo "evento -> ETL -> disponibilização -> decisão" com janela útil.]

@@ -86,7 +86,7 @@ Sempre que adequado, incluir:
 - profundidade técnica;
 - ao menos 1 elemento técnico (equação ou código);
 - ao menos 1 sugestão visual;
-- seção obrigatória: `O que isso demonstra sobre minha atuação`.
+- seção obrigatória: `Lições práticas para times de dados`.
 
 ## Recruiter Lens Checklist (obrigatório)
 

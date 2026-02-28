@@ -102,11 +102,11 @@ preprocess = ColumnTransformer([
 - maior complexidade de transformação pode elevar performance, mas dificultar manutenção;
 - maior número de features pode ajudar no treino e atrapalhar em produção.
 
-## O que isso demonstra sobre minha atuação
+## Lições práticas para times de dados
 
-- Eu trato transformação como decisão de engenharia, não como etapa mecânica.
-- Eu conecto preprocessamento à confiabilidade operacional do modelo.
-- Eu priorizo pipeline reproduzível para reduzir retrabalho e risco de inconsistência.
+- Tratar transformação como decisão de engenharia, não como etapa mecânica.
+- Conectar preprocessamento à confiabilidade operacional do modelo.
+- Priorizar pipeline reproduzível para reduzir retrabalho e risco de inconsistência.
 
 [INSERIR IMAGEM: fluxo visual de transformação de dados com etapas de limpeza, padronização, feature engineering e modelagem.]
 [SUGESTÃO DE INFOGRÁFICO: maturidade de transformação de dados em três níveis (básico, intermediário, avançado).]
