@@ -9,8 +9,8 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/danilo-portfolio/";
     },
-  },{id: "nav-artigos-e-insights",
-          title: "Artigos e Insights",
+  },{id: "nav-insights-amp-articles",
+          title: "Insights &amp; Articles",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "Resumo da minha experiência profissional, formação, projetos e competências técnicas.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/danilo-portfolio/cv/";
@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-people",
           title: "People",
-          description: "members of the lab or group",
+          description: "People I worked with or connected with through professional experiences.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/danilo-portfolio/people/";
