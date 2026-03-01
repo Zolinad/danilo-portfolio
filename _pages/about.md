@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Sou cientista de dados com formação em Engenharia de Controle e Automação e MBA em Data Science & Analytics. Minha trajetória combina experiência em operações de mineração, com foco em estratégia e indicadores, e atuação em docência na área de tecnologia.
+Sou cientista de dados com formação em Engenharia de Controle e Automação e MBA em Data Science & Analytics. Minha trajetória combina experiência em operações de mineração, com foco em estratégia e indicadores, e atuação em docência na área de tecnologia, incluindo experiência como Professor na Universidade Federal do Oeste do Pará (UFOPA), ministrando disciplinas de Inteligência Artificial e Data Science.
 
 Gosto de transformar problemas reais em soluções práticas: automação, ETL, análise de dados, construção de KPIs e aplicações de machine learning para apoiar decisões com mais clareza e agilidade.
 
