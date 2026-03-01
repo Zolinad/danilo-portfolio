@@ -5,24 +5,31 @@ Objetivo: separar conteúdo que fortalece a marca profissional do que é apenas 
 ## 1) Manter (conteúdo autoral atual)
 
 ### Posts autorais (Insights)
+
 - `_posts/2026-02-26-kpi-bonito-nao-paga-conta.md`
 - `_posts/2026-02-26-etl-para-decisao-operacional.md`
 - `_posts/2026-02-26-anomalia-sem-fadiga-de-alerta.md`
 
 ### Projects autorais
+
 - `_projects/10_auditoria-financeira-anomalias.md`
 - `_projects/11_dashboard-kpis-hierarquicos.md`
 
 ### Arquivos de estratégia interna
+
+- `portfolio-content/00-role-evolution.md`
+- `portfolio-content/00-content-positioning-mode.md`
 - `portfolio-content/01-mapa-portfolio.md`
 - `portfolio-content/02-insights-arquitetura.md`
 - `portfolio-content/03-projects-arquitetura.md`
+- `portfolio-content/04-artigos-arquitetura.md`
 
 ## 2) Arquivar (recomendado)
 
 Conteúdo útil como referência técnica, mas que não deve aparecer no site final:
 
 ### Posts de demonstração do tema
+
 - `_posts/2015-03-15-formatting-and-links.md`
 - `_posts/2015-05-15-images.md`
 - `_posts/2015-07-15-code.md`
@@ -55,7 +62,14 @@ Conteúdo útil como referência técnica, mas que não deve aparecer no site fi
 - `_posts/2024-12-04-photo-gallery.md`
 - `_posts/2025-03-26-plotly.md`
 
+### Conteúdos adicionais para manter arquivados (não publicar)
+
+- `Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra`
+- `Displaying External Posts on Your al-folio Blog`
+- Registro interno: `portfolio-content/archive-template/archived-topics-not-published.md`
+
 ### Projetos de demonstração
+
 - `_projects/1_project.md`
 - `_projects/2_project.md`
 - `_projects/3_project.md`
@@ -69,17 +83,19 @@ Conteúdo útil como referência técnica, mas que não deve aparecer no site fi
 ## 3) Remover do site público (recomendado)
 
 ### Referências explícitas a Einstein/template
+
 - `_pages/profiles.md` (usa `about_einstein.md` com dados placeholder)
 - `_pages/about_einstein.md`
 
 ### Referências que podem confundir identidade profissional
+
 - `assets/json/resume.json` (dados de exemplo, inclui e-mail `einstein@example.com`)
 
 ## 4) Revisar depois (depende da estratégia)
 
 - `_bibliography/papers.bib`
   - contém várias entradas de exemplo com Einstein.
-  - decisão: substituir por bibliografia real do autor ou manter apenas as entradas reais.
+  - decisão: substituir por minha bibliografia real ou manter apenas as entradas reais.
 
 - `_data/citations.yml`
   - contém dados amplos de citações de exemplo; verificar se ainda é necessário para o uso atual.
@@ -95,6 +111,7 @@ Conteúdo útil como referência técnica, mas que não deve aparecer no site fi
 ## 6) Critério final
 
 Manter no portfólio público apenas conteúdo que:
+
 - reforça sua trajetória real;
 - demonstra capacidade técnica e impacto;
 - melhora leitura de recrutadores em menos de 1-2 minutos por seção.

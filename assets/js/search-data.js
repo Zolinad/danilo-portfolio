@@ -9,8 +9,8 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/danilo-portfolio/";
     },
-  },{id: "nav-insights",
-          title: "Insights",
+  },{id: "nav-artigos-e-insights",
+          title: "Artigos e Insights",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -51,7 +51,51 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/danilo-portfolio/people/";
           },
-        },{id: "post-detecção-de-anomalias-sem-fadiga-de-alerta-o-que-realmente-funciona",
+        },{id: "post-git-e-github-para-quem-está-começando-em-ciência-de-dados",
+        
+          title: "Git e GitHub para quem está começando em ciência de dados",
+        
+        description: "Introdução prática a Git e GitHub para versionamento, colaboração e maturidade técnica em dados.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/danilo-portfolio/blog/2026/git-intro/";
+          
+        },
+      },{id: "post-docker-para-quem-está-começando-em-ciência-de-dados",
+        
+          title: "Docker para quem está começando em ciência de dados",
+        
+        description: "Introdução prática a Docker para reprodutibilidade e profissionalização em projetos de dados.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/danilo-portfolio/blog/2026/docker-intro/";
+          
+        },
+      },{id: "post-terminal-linux-básico-comandos-essenciais-para-trabalhar-com-mais-velocidade",
+        
+          title: "Terminal Linux básico: comandos essenciais para trabalhar com mais velocidade",
+        
+        description: "Uma base prática para navegar, inspecionar e operar sistemas Linux com segurança.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/danilo-portfolio/blog/2026/terminal_linux_basic/";
+          
+        },
+      },{id: "post-transformação-de-dados-em-ciência-de-dados-do-básico-ao-avançado",
+        
+          title: "Transformação de dados em ciência de dados: do básico ao avançado",
+        
+        description: "Como eu estruturo transformação de dados para reduzir ruído analítico e aumentar qualidade de decisão.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/danilo-portfolio/blog/2026/transf_dados_basico_avancado/";
+          
+        },
+      },{id: "post-detecção-de-anomalias-sem-fadiga-de-alerta-o-que-realmente-funciona",
         
           title: "Detecção de anomalias sem fadiga de alerta: o que realmente funciona",
         
@@ -82,28 +126,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/danilo-portfolio/blog/2026/kpi-bonito-nao-paga-conta/";
-          
-        },
-      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
       },{id: "books-the-godfather",
@@ -175,14 +197,5 @@ ninja.data = [{
       section: 'Theme',
       handler: () => {
         setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
       },
     },];
