@@ -6,8 +6,8 @@ Este repositório inclui agentes e arquivos especializados do GitHub Copilot par
 
 ### CLAUDE.md
 
-O arquivo `CLAUDE.md` funciona como ponto de entrada para o Claude (assistente de IA da Anthropic).
-Ele utiliza a sintaxe `@path/to/import` para importar dinamicamente o arquivo `AGENTS.md`, mantendo a documentação centralizada.
+O arquivo `CLAUDE.md` funcionaria como ponto de entrada para o Claude (assistente de IA da Anthropic).
+Ele utilizaria a sintaxe `@path/to/import` para importar dinamicamente o arquivo `AGENTS.md`, mantendo a documentação centralizada.
 
 Conteúdo do arquivo:
 
