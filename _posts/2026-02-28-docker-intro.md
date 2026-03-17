@@ -7,7 +7,7 @@ tags: [docker, data-science, ambientes, reprodutibilidade, mlops]
 categories: insights
 ---
 
-## O Guia Prático que Acelera Sua Maturidade Técnica
+### O Guia Prático que Acelera Sua Maturidade Técnica
 
 Se você está começando como Cientista de Dados, provavelmente já passou por isso:
 
@@ -24,7 +24,7 @@ E não — Docker não é “coisa de DevOps”. Para quem quer crescer na carre
 
 ---
 
-# Por Que um Cientista de Dados Deve Aprender Docker?
+## Por Que um Cientista de Dados Deve Aprender Docker?
 
 Ciência de Dados não é só análise e modelos. É também:
 
@@ -35,21 +35,21 @@ Ciência de Dados não é só análise e modelos. É também:
 
 Docker resolve problemas reais:
 
-### 1️⃣ Reprodutibilidade
+#### 1️⃣ Reprodutibilidade
 
 Você consegue garantir que o ambiente do experimento será exatamente o mesmo em qualquer máquina.
 
-### 2️⃣ Fim do “funciona na minha máquina”
+#### 2️⃣ Fim do “funciona na minha máquina”
 
 Seu projeto passa a rodar de forma idêntica no seu notebook, no servidor da empresa ou na cloud.
 
-### 3️⃣ Profissionalização
+#### 3️⃣ Profissionalização
 
 Times maduros trabalham com ambientes containerizados. Saber Docker te aproxima desse nível.
 
 ---
 
-# O Que é Docker (Explicação Simples)
+## O Que é Docker (Explicação Simples)
 
 Docker é uma ferramenta que permite criar **containers**.
 
@@ -67,11 +67,11 @@ Diferente de máquinas virtuais, containers são mais leves e rápidos. Eles com
 
 ---
 
-# Conceitos Fundamentais
+## Conceitos Fundamentais
 
 Antes de ir para a prática, você precisa entender 4 conceitos principais.
 
-## 🔹 Imagem (Image)
+### 🔹 Imagem (Image)
 
 É o “molde” do ambiente.
 Contém o sistema base e todas as dependências instaladas.
@@ -83,7 +83,7 @@ Imagens são imutáveis.
 
 ---
 
-## 🔹 Container
+### 🔹 Container
 
 É a instância em execução de uma imagem.
 
@@ -94,7 +94,7 @@ Você pode criar vários containers a partir da mesma imagem.
 
 ---
 
-## 🔹 Dockerfile
+### 🔹 Dockerfile
 
 É um arquivo de texto com instruções para construir uma imagem.
 
@@ -117,7 +117,7 @@ Esse arquivo define exatamente como seu ambiente será criado.
 
 ---
 
-## 🔹 Docker Hub
+### 🔹 Docker Hub
 
 É o repositório público de imagens.
 
@@ -133,7 +133,7 @@ Evita que você precise configurar tudo do zero.
 
 ---
 
-# Instalando e Testando Docker
+## Instalando e Testando Docker
 
 Após instalar o Docker, valide com:
 
@@ -153,11 +153,11 @@ Primeira vitória rápida.
 
 ---
 
-# Docker na Prática para Ciência de Dados
+## Docker na Prática para Ciência de Dados
 
 Agora vamos para o que importa.
 
-## Criando um Ambiente Python Reprodutível
+### Criando um Ambiente Python Reprodutível
 
 Estrutura do projeto:
 
@@ -168,7 +168,7 @@ projeto/
  └── Dockerfile
 ```
 
-### requirements.txt
+#### requirements.txt
 
 ```
 pandas
@@ -176,13 +176,13 @@ numpy
 scikit-learn
 ```
 
-### Construindo a imagem
+#### Construindo a imagem
 
 ```bash
 docker build -t meu-projeto-ds .
 ```
 
-### Rodando o container
+#### Rodando o container
 
 ```bash
 docker run meu-projeto-ds
@@ -193,7 +193,7 @@ Você acabou de transformar seu projeto em algo portátil.
 
 ---
 
-# Rodando Jupyter Notebook no Docker
+## Rodando Jupyter Notebook no Docker
 
 Muito comum em Data Science.
 
@@ -212,9 +212,9 @@ Agora seus notebooks ficam persistidos na sua máquina.
 
 ---
 
-# Conceitos Essenciais para Projetos de Dados
+## Conceitos Essenciais para Projetos de Dados
 
-## 🔹 Volumes
+### 🔹 Volumes
 
 Sem volume, você perde dados ao encerrar o container.
 
@@ -232,7 +232,7 @@ Fundamental para:
 
 ---
 
-## 🔹 Port Mapping
+### 🔹 Port Mapping
 
 Exemplo:
 
@@ -250,7 +250,7 @@ Muito usado para:
 
 ---
 
-## 🔹 Variáveis de Ambiente
+### 🔹 Variáveis de Ambiente
 
 Em vez de hardcode:
 
@@ -268,7 +268,7 @@ Boa prática profissional.
 
 ---
 
-# Docker em Projetos de Machine Learning
+## Docker em Projetos de Machine Learning
 
 Aqui começa o diferencial.
 
@@ -292,7 +292,7 @@ Isso transforma você de “analista que treina modelo” em “profissional que
 
 ---
 
-# Introdução ao Docker Compose
+## Introdução ao Docker Compose
 
 Quando seu projeto começa a crescer:
 
@@ -328,7 +328,7 @@ Agora você orquestra múltiplos serviços facilmente.
 
 ---
 
-# Erros Comuns de Iniciantes
+## Erros Comuns de Iniciantes
 
 * Não usar `.dockerignore`
 * Criar imagens gigantes
@@ -341,7 +341,7 @@ Evitar esses erros já te coloca acima da média.
 
 ---
 
-# Boas Práticas para Cientistas de Dados
+## Boas Práticas para Cientistas de Dados
 
 ✔ Fixar versões de bibliotecas
 ✔ Usar imagens oficiais
@@ -355,7 +355,7 @@ Docker não é sobre complexidade.
 
 ---
 
-# Docker e Carreira em Dados
+## Docker e Carreira em Dados
 
 Aqui está o ponto estratégico.
 
@@ -373,7 +373,7 @@ Buscam quem consegue entregar.
 
 ---
 
-# Conclusão
+## Conclusão
 
 Aprender Docker é um divisor de águas.
 
@@ -393,7 +393,7 @@ Mas ambientes reprodutíveis constroem carreiras.
 
 ---
 
-## Referências
+### Referências
 
 - [Docker Documentation](https://docs.docker.com/)
 - [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
