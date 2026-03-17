@@ -7,7 +7,7 @@ tags: [docker, data-science, ambientes, reprodutibilidade, mlops]
 categories: insights
 ---
 
-### O Guia Prático que Acelera Sua Maturidade Técnica
+## O Guia Prático que Acelera Sua Maturidade Técnica
 
 Se você está começando como Cientista de Dados, provavelmente já passou por isso:
 

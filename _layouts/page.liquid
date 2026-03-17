@@ -14,7 +14,7 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
   </header>
 
-  <article>
+  <article{% if page.url contains '/projects/' %} class="post-content"{% endif %}>
     {{ content }}
   </article>
 
