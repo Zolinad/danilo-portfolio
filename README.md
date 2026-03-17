@@ -79,5 +79,3 @@ Guias disponíveis:
 - SEO Guide – Otimização para mecanismos de busca
 
 ---
-
-Se desejar, posso adaptar o texto para um README mais técnico ou mais orientado a portfólio.
