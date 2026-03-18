@@ -19,11 +19,14 @@ strong {
   color: var(--global-text-color);
 }
 
-.post-content-style {
-  .post-title,
-  article.post-content h2 {
-    font-weight: bold;
-  }
+h1,
+.post-title,
+article h2 {
+  font-weight: bold;
+}
+
+.header-bar h2 {
+  font-weight: normal;
 }
 
 html:not([data-theme="dark"]) {
