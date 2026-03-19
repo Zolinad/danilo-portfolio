@@ -4,7 +4,7 @@ title: "Docker para quem está começando em ciência de dados"
 date: 2026-02-28 17:55:00
 description: "Introdução prática a Docker para reprodutibilidade e profissionalização em projetos de dados."
 tags: [docker, data-science, ambientes, reprodutibilidade, mlops]
-categories: insights
+categories: [artigos]
 ---
 
 ## O Guia Prático que Acelera Sua Maturidade Técnica

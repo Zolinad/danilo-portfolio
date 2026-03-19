@@ -4,7 +4,7 @@ title: "ETL para decisão: como reduzir atrito entre dado e operação"
 date: 2026-02-26 18:20:00
 description: "Uma estrutura prática para pipelines que realmente suportam decisão no tempo certo."
 tags: [etl, data-engineering, python, sql, decision-support]
-categories: insights
+categories: [insights]
 ---
 
 Quando eu escuto que "o dado não chegou a tempo", quase sempre o problema não é só tecnologia. Na maioria dos casos, é desenho de processo.

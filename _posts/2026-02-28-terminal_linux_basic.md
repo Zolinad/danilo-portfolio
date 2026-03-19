@@ -4,7 +4,7 @@ title: "Terminal Linux básico: comandos essenciais para trabalhar com mais velo
 date: 2026-02-28 09:35:00
 description: "Uma base prática para navegar, inspecionar e operar sistemas Linux com segurança."
 tags: [linux, terminal, shell, devops, infraestrutura]
-categories: insights
+categories: [artigos]
 ---
 
 Dominar terminal Linux é uma alavanca de produtividade para qualquer pessoa que trabalhe com dados, backend, cloud ou infraestrutura.

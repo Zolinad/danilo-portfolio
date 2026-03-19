@@ -4,7 +4,7 @@ title: "Engenharia de Features em Sistemas Industriais: Do Sensor à Decisão de
 date: 2026-03-11 20:15:00
 description: "Uma análise metodológica sobre a transformação de séries temporais de alta frequência em indicadores decisórios."
 tags: [feature-engineering, industrial-iot, analytics, data-science]
-categories: insights
+categories: [artigos]
 ---
 
 Na minha análise da maturidade analítica em operações industriais, observo que a distância entre o dado bruto do sensor e a tomada de decisão estratégica é frequentemente subestimada. A construção de modelos robustos em ambientes de manufatura ou mineração não depende apenas da complexidade do algoritmo, mas fundamentalmente da qualidade das representações criadas na etapa de engenharia de atributos.

@@ -18,6 +18,9 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       Created on {{ page.date | date: '%B %d, %Y' }}
+      {% assign words = content | number_of_words %}
+      {% assign read_time = words | divided_by: 180 | at_least: 1 %}
+      &nbsp; &middot; &nbsp; <i class="fa-regular fa-clock fa-sm"></i> {{ read_time }} min read
       {% if page.author %}by {{ page.author }}{% endif %}
       {% assign last_date = page.last_modified_at | default: page.last_updated %}
       {% if last_date %}, last updated on {{ last_date | date: '%B %d, %Y' }}{% endif %}
@@ -46,7 +49,9 @@ layout: default
       {% if categories != '' %}
         &nbsp; &middot; &nbsp;
         {% for category in page.categories %}
-          {% if url_beginning == '/blog/' %}
+          {% if category == "projects" %}
+            <a href="{{ '/projects/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}</a>
+          {% elsif url_beginning == '/blog/' %}
             <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}</a>
           {% else %}
             <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
