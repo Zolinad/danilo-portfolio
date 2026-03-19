@@ -11,6 +11,10 @@
   h1 {
     color: var(--global-theme-color);
     font-size: 5rem;
+    font-weight: 300 !important;
+  }
+  h2 {
+    font-weight: normal !important;
   }
 }
 

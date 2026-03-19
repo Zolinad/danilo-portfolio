@@ -37,7 +37,7 @@ article h2 {
 }
 
 .header-bar h2 {
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 html:not([data-theme="dark"]) {
