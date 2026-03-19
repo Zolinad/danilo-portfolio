@@ -51,7 +51,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/danilo-portfolio/people/";
           },
-        },{id: "post-git-e-github-para-quem-está-começando-em-ciência-de-dados",
+        },{id: "post-ia-agêntica-além-dos-scripts-para-automação-em-escala",
+        
+          title: "IA Agêntica: Além dos Scripts para Automação em Escala",
+        
+        description: "Por que o futuro da análise de dados industrial reside na modularização de Skills para orquestração agentica.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/danilo-portfolio/blog/2026/ia-agentica-automacao-skills/";
+          
+        },
+      },{id: "post-engenharia-de-features-em-sistemas-industriais-do-sensor-à-decisão-de-negócio",
+        
+          title: "Engenharia de Features em Sistemas Industriais: Do Sensor à Decisão de Negócio",
+        
+        description: "Uma análise metodológica sobre a transformação de séries temporais de alta frequência em indicadores decisórios.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/danilo-portfolio/blog/2026/feature-engineering-industrial-universal/";
+          
+        },
+      },{id: "post-git-e-github-para-quem-está-começando-em-ciência-de-dados",
         
           title: "Git e GitHub para quem está começando em ciência de dados",
         
