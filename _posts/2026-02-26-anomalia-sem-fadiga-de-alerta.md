@@ -4,7 +4,7 @@ title: "Detecção de anomalias sem fadiga de alerta: o que realmente funciona"
 date: 2026-02-26 18:30:00
 description: "Como usar modelos não supervisionados para risco sem inundar a operação com falsos positivos."
 tags: [anomaly-detection, unsupervised-learning, risk-analytics, scikit-learn]
-categories: insights
+categories: [insights]
 ---
 
 Quando eu trabalho com detecção de anomalias, o erro mais comum é tratar o projeto como um problema só de modelagem. Para mim, o ponto central é decisão operacional.

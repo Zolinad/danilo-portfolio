@@ -4,7 +4,7 @@ title: "Transformação de dados em ciência de dados: do básico ao avançado"
 date: 2026-02-28 09:20:00
 description: "Como eu estruturo transformação de dados para reduzir ruído analítico e aumentar qualidade de decisão."
 tags: [data-transformation, etl, feature-engineering, python, scikit-learn]
-categories: insights
+categories: [artigos]
 ---
 
 Transformação de dados é uma etapa que define o teto de qualidade de qualquer projeto analítico. Na prática, não existe modelo sofisticado que compense entrada inconsistente.

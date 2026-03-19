@@ -4,7 +4,7 @@ title: "IA Agêntica: Além dos Scripts para Automação em Escala"
 date: 2026-03-18 22:30:00
 description: "Por que o futuro da análise de dados industrial reside na modularização de Skills para orquestração agentica."
 tags: [agentic-ai, automacao-de-workflows, python, decision-support]
-categories: insights
+categories: [insights]
 ---
 
 

@@ -4,7 +4,7 @@ title: "KPI bonito não paga conta: como escolher indicadores que movem resultad
 date: 2026-02-26 18:10:00
 description: "Um guia prático para transformar dashboards em decisões operacionais melhores."
 tags: [kpi, analytics-strategy, industrial-operations, six-sigma]
-categories: insights
+categories: [insights]
 ---
 
 Na minha experiência em operações, um dashboard pode ser visualmente excelente e, ainda assim, não ajudar ninguém a decidir melhor.

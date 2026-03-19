@@ -1,10 +1,13 @@
 ---
 layout: page
 title: "Dashboard Estratégico de KPIs Hierárquicos"
+date: 2026-03-12
 description: "Arquitetura de indicadores para conectar operação, tática e estratégia em um único fluxo decisório."
 img: assets/img/10.jpg
 importance: -1
-category: work
+category: projects
+categories: [projects]
+tags: [dashboard, bi, visualização-de-dados, estratégia]
 ---
 
 ## Contexto
