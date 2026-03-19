@@ -20,11 +20,21 @@ strong {
 }
 
 h1,
-.post-title {
+.post-header .post-title {
   font-weight: bold;
   font-size: 2.8rem;
   line-height: 1.1;
   margin-bottom: 0.75rem;
+}
+
+h3,
+.post-list h1,
+.post-list h2,
+.post-list .post-title,
+.featured-posts h1,
+.featured-posts h2,
+.featured-posts .card-title {
+  font-weight: normal !important;
 }
 
 article h2 {
@@ -37,7 +47,7 @@ article h2 {
 }
 
 .header-bar h2 {
-  font-weight: normal !important;
+  font-weight: 300 !important;
 }
 
 html:not([data-theme="dark"]) {
