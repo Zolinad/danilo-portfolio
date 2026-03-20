@@ -26,12 +26,21 @@ body {
 .katex-display, 
 .table-responsive, 
 table, 
-pre, 
+pre:not(.highlight pre), 
 .highlight,
 d-article {
   overflow-x: auto !important;
-  max-width: 100%;
-  display: block; // Garante isolamento para o scroll interno
+  max-width: 100% !important;
+  display: block !important;
+  position: relative !important; // Ajuda no cálculo de overflow do Safari
+  -webkit-overflow-scrolling: touch; 
+  touch-action: pan-x; // Prioriza o scroll horizontal ao toque
+}
+
+// Força o MathJax a não estourar o container pai e ignorar min-width interno
+.mjx-container[display="true"] {
+  min-width: 100% !important;
+  width: 100% !important;
 }
 
 html {
