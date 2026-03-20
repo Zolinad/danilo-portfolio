@@ -69,6 +69,13 @@ p.location {
   vertical-align: top;
 }
 
+@media (max-width: 767.98px) {
+  p.location,
+  .location-text {
+    white-space: nowrap;
+  }
+}
+
 i.iconlocation {
   color: var(--global-text-color);
   font-size: 0.8rem;
