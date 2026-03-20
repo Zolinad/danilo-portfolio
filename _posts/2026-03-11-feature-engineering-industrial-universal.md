@@ -7,7 +7,7 @@ tags: [feature-engineering, industrial-iot, analytics, data-science]
 categories: [artigos]
 ---
 
-Na minha análise da maturidade analítica em operações industriais, observo que a distância entre o dado bruto do sensor e a tomada de decisão estratégica é frequentemente subestimada. A construção de modelos robustos em ambientes de manufatura ou mineração não depende apenas da complexidade do algoritmo, mas fundamentalmente da qualidade das representações criadas na etapa de engenharia de atributos.
+Em todos os projetos que conduzi em operações industriais, percebi que a maior distância não é entre o sensor e a nuvem, mas entre o dado bruto e uma decisão que realmente salve dinheiro ou evite paradas. Eu observo que muitos times subestimam essa transição. Construir modelos robustos em manufatura ou mineração não é só sobre o algoritmo; eu acredito que o sucesso depende da física injetada na engenharia de atributos.
 
 ## O Contexto do Problema
 

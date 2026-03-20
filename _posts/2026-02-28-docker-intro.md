@@ -9,7 +9,11 @@ categories: [artigos]
 
 ## O Guia Prático que Acelera Sua Maturidade Técnica
 
-Se você está começando como Cientista de Dados, provavelmente já passou por isso:
+O Docker não é apenas uma ferramenta de DevOps; é o que garante que o meu experimento de hoje rodará exatamente igual daqui a um ano ou em qualquer servidor.
+
+Se eu pudesse dar um conselho para quem está começando, seria este: pare de lutar com ambientes locais e comece a containerizar seus projetos.
+
+Provavelmente você já passou por uma dessas situações abaixo:
 
 * O notebook roda na sua máquina, mas não roda na do colega.
 * A versão do Python está diferente.

@@ -7,9 +7,9 @@ tags: [linux, terminal, shell, devops, infraestrutura]
 categories: [artigos]
 ---
 
-Dominar terminal Linux é uma alavanca de produtividade para qualquer pessoa que trabalhe com dados, backend, cloud ou infraestrutura.
+No meu dia a dia, o terminal Linux não é apenas uma ferramenta; é o meu centro de comando. Eu acredito que dominar a linha de comando é a maior alavanca de produtividade que um profissional de tecnologia pode ter, especialmente em áreas como Ciência de Dados e Engenharia, onde a infraestrutura e a automação são fundamentais.
 
-Neste guia, organizo uma trilha prática de comandos básicos para reduzir erro operacional e ganhar fluidez no dia a dia.
+Neste guia, organizei os comandos que eu mais utilizo para reduzir erros operacionais e ganhar fluidez. Se você quer parar de depender de interfaces visuais limitadas, esta é a base que eu recomendo fortalecer.
 
 ## Estrutura mínima para se orientar no sistema
 
