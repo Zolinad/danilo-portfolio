@@ -39,11 +39,12 @@
                 {% if entry.location %}{{ entry.location }}{% endif %}
               {% endcapture %}
               {% if location != '' %}
+                {% assign loc_parts = location | strip | split: ', ' %}
                 <tr>
                   <td>
                     <p class="location">
                       <i class="fa-solid fa-location-dot iconlocation"></i>
-                      {{ location }}
+                      {{ loc_parts[0] }}{% if loc_parts.size > 1 %}<br>{{ loc_parts | slice: 1, loc_parts.size | join: ', ' }}{% endif %}
                     </p>
                   </td>
                 </tr>
