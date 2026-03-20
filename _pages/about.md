@@ -4,6 +4,7 @@ title: Home
 permalink: /
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 subtitle: Bem-vindo, visitante! 
+description: Cientista de Dados focado em Automação, BI, ETL e Machine Learning. Explore meu portfólio de projetos e artigos técnicos.
 
 profile:
   align: right
