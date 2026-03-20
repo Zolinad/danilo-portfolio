@@ -23,6 +23,8 @@ body {
 
 // Garante que equações, tabelas e código não quebrem o layout mobile
 .mjx-container, 
+.mjx-container[jax="CHTML"][display="true"],
+.mjx-container[jax="SVG"][display="true"],
 .katex-display, 
 .table-responsive, 
 table, 
@@ -32,12 +34,13 @@ d-article {
   overflow-x: auto !important;
   max-width: 100% !important;
   display: block !important;
-  position: relative !important; // Ajuda no cálculo de overflow do Safari
+  position: relative !important;
   -webkit-overflow-scrolling: touch; 
-  touch-action: pan-x; // Prioriza o scroll horizontal ao toque
+  touch-action: pan-x;
+  padding: 0.5rem 0 !important; // Evita que o scrollbar tape e corte frações
 }
 
-// Força o MathJax a não estourar o container pai e ignorar min-width interno
+// Força o contêiner a ocupar a largura do celular
 .mjx-container[display="true"] {
   min-width: 100% !important;
   width: 100% !important;

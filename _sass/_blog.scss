@@ -39,7 +39,7 @@
 
 .post-title {
   mjx-container[jax="CHTML"][display="true"] {
-    display: unset;
+    display: block !important;
   }
 }
 
@@ -77,7 +77,7 @@
     }
 
     mjx-container[jax="CHTML"][display="true"] {
-      display: unset;
+      display: block !important;
     }
   }
 }
