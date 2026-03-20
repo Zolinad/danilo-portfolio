@@ -64,6 +64,13 @@ html:not([data-theme="dark"]) {
   }
 }
 
+html[data-theme="dark"] {
+  strong,
+  b {
+    color: var(--global-theme-color);
+  }
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
