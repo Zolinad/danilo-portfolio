@@ -59,15 +59,15 @@ div:has(> .mjx-container[display="true"]) {
   overflow: visible !important;
 }
 
-// O próprio mjx-container com SVG nativo pode controlar o scroll horizontal sem ajuda
-.mjx-container[jax="SVG"][display="true"] {
-  overflow-y: hidden !important; 
+// Força a exibição CHTML em bloco ocupando toda a tela 
+.mjx-container[display="true"] {
+  min-width: 100% !important;
   width: 100% !important;
-  margin: 0 auto !important; 
+  overflow-y: hidden !important; 
 }
 
-// Força o SVG interno a não encolher (para provocar scroll em invés de ficar ilegível)
-.mjx-container[jax="SVG"][display="true"] > svg {
+// Garante que o conteúdo CHTML interno não encolha
+.mjx-container[display="true"] > mjx-math {
   min-width: max-content !important;
 }
 
