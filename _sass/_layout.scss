@@ -26,7 +26,7 @@ body {
 .mjx-container[display="true"],
 .katex-display, 
 .table-responsive, 
-table, 
+table:not(.table-cv):not(.institution), 
 pre:not(.highlight pre), 
 .highlight,
 d-article {

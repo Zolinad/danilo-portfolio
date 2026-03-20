@@ -16,11 +16,19 @@ div.container-link-button {
 
 table.table-cv {
   background-color: transparent !important;
+  overflow: hidden !important;
+  max-width: 100% !important;
 
   td,
   th {
     padding: 1px;
+    overflow: hidden !important;
   }
+}
+
+.date-column {
+  overflow: hidden !important;
+  max-width: 100% !important;
 }
 
 a.btncv {
