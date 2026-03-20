@@ -16,8 +16,10 @@
             {% if site.last_name %}
               {{- site.last_name -}}
             {% endif %}
+            <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
           {% else %}
-            {{- site.title -}}
+            <span class="font-weight-bold">{{- site.first_name -}}</span>
+            <i class="fa-solid fa-house ml-1"></i>
           {% endif %}
         </a>
       {% elsif site.enable_navbar_social %}
