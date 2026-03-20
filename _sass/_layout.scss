@@ -36,28 +36,46 @@ d-article {
   position: relative !important;
   -webkit-overflow-scrolling: touch !important; 
   touch-action: pan-x !important;
-  padding: 0.8rem 0 !important; 
-  min-height: 1px; // Bugfix para o Safari ignorar overflow
+  padding: 1.2rem 0 !important; 
+  min-height: 1px;
+  // border: 2px solid #28a745 !important; // DEBUG: Verde = Deve ter scroll
 }
 
-/* O Markdown frequentemente coloca a equação display (bloco) dentro de um <p> isolado.
- * Ao fazer isso, o <p> expande em vez de permitir o scrollbar interno. 
- * Esta regra delega o scroll para esse pai invisível criado pelo Markdown */
+/* Forçar a visibilidade da barra de rolagem no mobile para teste de toque */
+.mjx-container::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar,
+.math-scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+  background-color: rgba(0,0,0,0.05);
+  display: block !important;
+}
+.mjx-container::-webkit-scrollbar-thumb,
+.table-responsive::-webkit-scrollbar-thumb,
+.math-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: var(--global-theme-color);
+  border-radius: 10px;
+}
+
+/* O Markdown frequentemente coloca a equação display (bloco) dentro de um <p> isolado. */
 p:has(> .mjx-container[display="true"]),
 div:has(> .mjx-container[display="true"]) {
   overflow-x: auto !important;
   max-width: 100% !important;
   -webkit-overflow-scrolling: touch !important;
+  // border: 2px solid #007bff !important; // DEBUG: Azul = Parent interceptador
 }
 
-// Conserto de Flexbox do Bootstrap: As colunas que guardam o post não podem expandir além da tela
+// Conserto de Flexbox do Bootstrap
 .row > [class^="col-"] {
   min-width: 0;
+  max-width: 100% !important;
 }
 
-// Reset de clipping em pais conhecidos que podem estar cortando o conteúdo
+// Reset de clipping em pais conhecidos
 .post-content, .cv, article, #markdown-content {
   overflow: visible !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 // Força a exibição CHTML em bloco ocupando toda a tela 
@@ -65,12 +83,15 @@ div:has(> .mjx-container[display="true"]) {
   min-width: 100% !important;
   width: 100% !important;
   overflow-y: hidden !important; 
+  text-align: center !important;
 }
 
 // Garante que o conteúdo CHTML interno não encolha
 .mjx-container[display="true"] > mjx-math {
   min-width: max-content !important;
+  display: inline-block !important; /* Ajuda o parent a ver o overflow */
 }
+
 
 html {
   overflow-x: clip; 

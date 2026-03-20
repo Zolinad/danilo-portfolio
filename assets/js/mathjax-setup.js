@@ -7,6 +7,7 @@ window.MathJax = {
     ],
   },
   options: {
+    enableMenu: false,
     renderActions: {
       addCss: [
         200,
