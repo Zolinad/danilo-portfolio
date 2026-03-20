@@ -28,7 +28,6 @@ body {
 .table-responsive, 
 table:not(.table-cv):not(.institution), 
 pre:not(.highlight pre), 
-.highlight,
 d-article {
   overflow-x: auto !important;
   max-width: 100% !important; 
@@ -39,6 +38,17 @@ d-article {
   padding: 1.2rem 0 !important; 
   min-height: 1px;
   // border: 2px solid #28a745 !important; // DEBUG: Verde = Deve ter scroll
+}
+
+.highlight {
+  overflow-x: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+  position: relative !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x !important;
+  padding: 1.2rem 1rem !important;
+  min-height: 1px;
 }
 
 /* Forçar a visibilidade da barra de rolagem no mobile para teste de toque */

@@ -26,7 +26,7 @@ pre {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
-  padding: 6px 12px;
+  padding: 0.9rem 1.25rem;
 
   // Responsive behavior for code blocks
   overflow-x: auto;
@@ -42,6 +42,11 @@ pre {
     padding: 0;
     white-space: inherit;
   }
+}
+
+figure.highlight pre {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 code {
