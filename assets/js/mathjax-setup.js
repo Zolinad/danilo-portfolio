@@ -6,6 +6,21 @@ window.MathJax = {
       ["\\(", "\\)"],
     ],
   },
+  startup: {
+    pageReady: () => {
+      return MathJax.startup.defaultPageReady().then(() => {
+        document.querySelectorAll('mjx-container[display="true"]').forEach(node => {
+          let parent = node.parentNode;
+          if (parent && !parent.classList.contains('math-scroll-wrapper')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'math-scroll-wrapper';
+            parent.insertBefore(wrapper, node);
+            wrapper.appendChild(node);
+          }
+        });
+      });
+    }
+  },
   options: {
     renderActions: {
       addCss: [
@@ -24,3 +39,4 @@ window.MathJax = {
     },
   },
 };
+
