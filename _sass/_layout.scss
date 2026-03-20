@@ -37,14 +37,21 @@ d-article {
   position: relative !important;
   -webkit-overflow-scrolling: touch; 
   touch-action: pan-x;
-  padding: 0.5rem 0 !important; // Evita que o scrollbar tape e corte frações
+  padding: 0.8rem 0 !important; 
+  min-height: 1px; // Bugfix para o Safari ignorar overflow
+}
+
+// Reset de clipping em pais conhecidos que podem estar cortando o conteúdo
+.post-content, .cv, article {
+  overflow: visible !important;
 }
 
 // Força o contêiner a ocupar a largura do celular e permitir o scroll do conteúdo largo
 .mjx-container[display="true"] {
   min-width: 100% !important;
   width: 100% !important;
-  overflow-y: hidden !important; // Evita scroll vertical indesejado na equação
+  overflow-y: hidden !important; 
+  // background: rgba(0, 0, 0, 0.02); // Debug: ajuda a ver a área de scroll
 }
 
 // Garante que o conteúdo interno (fórmulas) não encolha, forçando o scrollbar do pai
@@ -54,7 +61,7 @@ d-article {
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip; // 'clip' é mais amigável ao scroll interno que 'hidden' em alguns sistemas
 }
 
 body.fixed-top-nav {
