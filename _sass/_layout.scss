@@ -22,7 +22,7 @@ body {
 }
 
 // Garante que equações, tabelas e código não quebrem o layout mobile
-.math-scroll-wrapper,
+.mjx-container,
 .katex-display, 
 .table-responsive, 
 table, 
@@ -39,22 +39,22 @@ d-article {
   min-height: 1px; // Bugfix para o Safari ignorar overflow
 }
 
-.math-scroll-wrapper {
-  overflow-y: hidden !important; 
-  width: 100% !important;
-}
-
 // Reset de clipping em pais conhecidos que podem estar cortando o conteúdo
 .post-content, .cv, article {
   overflow: visible !important;
 }
 
-// O próprio mjx-container não deve gerenciar o overflow, deixando o wrapper cuidar
-.mjx-container[display="true"] {
-  min-width: max-content !important; // Cresce conforme a fórmula obriga
-  margin: 0 auto !important; // Reseta as margens pro wrapper assumir o limite
+// O próprio mjx-container com SVG nativo pode controlar o scroll horizontal sem ajuda
+.mjx-container[jax="SVG"][display="true"] {
+  overflow-y: hidden !important; 
+  width: 100% !important;
+  margin: 0 auto !important; 
 }
 
+// Força o SVG interno a não encolher (para provocar scroll em invés de ficar ilegível)
+.mjx-container[jax="SVG"][display="true"] > svg {
+  min-width: max-content !important;
+}
 
 html {
   overflow-x: clip; // 'clip' é mais amigável ao scroll interno que 'hidden' em alguns sistemas

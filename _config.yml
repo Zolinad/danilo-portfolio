@@ -495,12 +495,12 @@ third_party_libraries:
     version: "2.11.5"
   mathjax:
     integrity:
-      js: "sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+      js: ""
     local:
-      fonts: "output/chtml/fonts/woff-v2/"
+      fonts: ""
     url:
-      fonts: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/output/chtml/fonts/woff-v2/"
-      js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+      fonts: ""
+      js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-svg.js"
     version: "3.2.2"
   masonry:
     integrity:
