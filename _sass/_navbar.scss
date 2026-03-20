@@ -116,6 +116,8 @@
 }
 
 .navbar-toggler {
+  margin-right: 1.5rem; // Mantém o menu "visível" sem estar colado na borda (evita clipping)
+
   .icon-bar {
     display: block;
     width: 22px;

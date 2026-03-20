@@ -2,6 +2,14 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
+      <!-- Toogle theme mode -->
+      {% if site.enable_darkmode %}
+        <button id="light-toggle" title="Toggle light/dark theme" class="mr-3 ml-2">
+          <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+          <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+        </button>
+      {% endif %}
+
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
@@ -22,7 +30,7 @@
             <i class="fa-solid fa-home ml-1"></i>
           {% endif %}
         </a>
-{% elsif site.enable_navbar_social %}
+      {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% social_links %}</div>
       {% endif %}
@@ -124,15 +132,6 @@
             <li class="nav-item">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
                 <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
-              </button>
-            </li>
-          {% endif %}
-          {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
-            <li class="toggle-container">
-              <button id="light-toggle" title="Toggle light/dark theme">
-                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
               </button>
             </li>
           {% endif %}

@@ -57,4 +57,14 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover({
     trigger: "hover",
   });
+
+  // Close the navbar when clicking outside
+  $(document).click(function (event) {
+    var clickover = $(event.target);
+    var $navbar = $(".navbar-collapse");
+    var _opened = $navbar.hasClass("show");
+    if (_opened === true && !clickover.closest(".navbar-toggler").length && !clickover.closest(".navbar-collapse").length) {
+      $(".navbar-toggler").click();
+    }
+  });
 });
