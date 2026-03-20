@@ -206,3 +206,12 @@
     crossorigin="anonymous"
   >
 {% endif %}
+{% if site.enable_katex %}
+  <!-- KaTeX -->
+  <link
+    rel="stylesheet"
+    href="{{ site.third_party_libraries.katex.url.css }}"
+    integrity="{{ site.third_party_libraries.katex.integrity.css }}"
+    crossorigin="anonymous"
+  >
+{% endif %}

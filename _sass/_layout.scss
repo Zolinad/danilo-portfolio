@@ -43,6 +43,7 @@ d-article {
 
 /* Forçar a visibilidade da barra de rolagem no mobile para teste de toque */
 .mjx-container::-webkit-scrollbar,
+.katex-display::-webkit-scrollbar,
 .table-responsive::-webkit-scrollbar,
 .math-scroll-wrapper::-webkit-scrollbar {
   height: 6px;
@@ -50,6 +51,7 @@ d-article {
   display: block !important;
 }
 .mjx-container::-webkit-scrollbar-thumb,
+.katex-display::-webkit-scrollbar-thumb,
 .table-responsive::-webkit-scrollbar-thumb,
 .math-scroll-wrapper::-webkit-scrollbar-thumb {
   background: var(--global-theme-color);
@@ -58,7 +60,9 @@ d-article {
 
 /* O Markdown frequentemente coloca a equação display (bloco) dentro de um <p> isolado. */
 p:has(> .mjx-container[display="true"]),
-div:has(> .mjx-container[display="true"]) {
+div:has(> .mjx-container[display="true"]),
+p:has(> .katex-display),
+div:has(> .katex-display) {
   overflow-x: auto !important;
   max-width: 100% !important;
   -webkit-overflow-scrolling: touch !important;
@@ -79,7 +83,8 @@ div:has(> .mjx-container[display="true"]) {
 }
 
 // Força a exibição CHTML em bloco ocupando toda a tela 
-.mjx-container[display="true"] {
+.mjx-container[display="true"],
+.katex-display {
   min-width: 100% !important;
   width: 100% !important;
   overflow-y: hidden !important; 
@@ -87,7 +92,8 @@ div:has(> .mjx-container[display="true"]) {
 }
 
 // Garante que o conteúdo CHTML interno não encolha
-.mjx-container[display="true"] > mjx-math {
+.mjx-container[display="true"] > mjx-math,
+.katex-display > .katex {
   min-width: max-content !important;
   display: inline-block !important; /* Ajuda o parent a ver o overflow */
 }
