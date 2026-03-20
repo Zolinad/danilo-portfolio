@@ -228,25 +228,16 @@
   <script
     defer
     src="{{ site.third_party_libraries.katex.url.js }}"
-    integrity="{{ site.third_party_libraries.katex.integrity.js }}"
     crossorigin="anonymous"
   ></script>
   <script
     defer
     src="{{ site.third_party_libraries.katex.url.auto_render }}"
-    integrity="{{ site.third_party_libraries.katex.integrity.auto_render }}"
     crossorigin="anonymous"
-    onload="renderMathInElement(document.body, {
-      delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
-      ],
-      throwOnError : false
-    });"
   ></script>
+  <script defer src="{{ '/assets/js/katex-setup.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
 
 
 

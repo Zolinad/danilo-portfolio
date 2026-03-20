@@ -506,9 +506,9 @@ third_party_libraries:
     version: "3.2.2"
   katex:
     integrity:
-      css: "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzWq6lMueuxdy6sP5wK91D8JybShQsK3O7sc"
-      js: "sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0W0l8X"
-      auto_render: "sha384-+VBxdHjru7JfgBLP+HUXUupKUOPf5UB584RClON1huKeKUgiReWW3c0BVySiPWXn"
+      css: ""
+      js: ""
+      auto_render: ""
     url:
       css: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
       js: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
