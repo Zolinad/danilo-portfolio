@@ -1,0 +1,95 @@
+<div class="share-container mb-2 text-right d-inline-block">
+  <button class="share-btn" onclick="sharePage(this, '{{ page.title }}', '{{ page.url | absolute_url }}')" title="Compartilhar">
+    <i class="fa-solid fa-share-nodes"></i>
+  </button>
+  <span class="share-toast">Link copiado!</span>
+</div>
+
+<script>
+  function sharePage(btn, title, url) {
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        url: url
+      }).catch(() => fallbackCopy(btn, url));
+    } else {
+      fallbackCopy(btn, url);
+    }
+  }
+
+  function fallbackCopy(btn, url) {
+    // Tenta primeiro com a API moderna
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url)
+        .then(() => showToast(btn))
+        .catch(() => legacyCopy(btn, url));
+    } else {
+      legacyCopy(btn, url);
+    }
+  }
+
+  function legacyCopy(btn, url) {
+    const textArea = document.createElement("textarea");
+    textArea.value = url;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      showToast(btn);
+    } catch (err) {
+      console.error('Falha ao copiar', err);
+    }
+    document.body.removeChild(textArea);
+  }
+
+  function showToast(btn) {
+    const toast = btn.parentElement.querySelector('.share-toast');
+    if (toast) {
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+  }
+</script>
+
+<style>
+  .share-container {
+    position: relative;
+  }
+  .share-btn {
+    background: none;
+    border: none;
+    color: var(--global-text-color);
+    opacity: 0.6;
+    transition: opacity 0.2s, color 0.2s;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0;
+  }
+  .share-btn:hover {
+    opacity: 1;
+    color: var(--global-theme-color);
+  }
+  .share-toast {
+    visibility: hidden;
+    min-width: 100px;
+    background-color: var(--global-theme-color);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    right: 0;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .share-toast.show {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>

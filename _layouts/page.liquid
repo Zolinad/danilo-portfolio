@@ -56,6 +56,10 @@ layout: default
 
   <article{% if page.url contains '/projects/' %} class="post-content"{% endif %}>
     {{ content }}
+    <div class="content-share mt-5 text-right">
+      <p class="small text-muted mb-1">Gostou? Compartilhe este conteúdo:</p>
+      {% include share.liquid %}
+    </div>
   </article>
 
   {% if page.related_publications %}

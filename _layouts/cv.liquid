@@ -26,7 +26,7 @@ layout: default
           {% endif %}
           target="_blank"
           rel="noopener noreferrer"
-          class="float-right"
+          class="float-right ml-2"
         >
           <i class="fa-solid fa-file-pdf"></i>
         </a>
@@ -387,6 +387,10 @@ layout: default
       {% else %}
         <p>No CV data found. Please configure either RenderCV (cv.yml) or JSONResume (resume.json) data.</p>
       {% endif %}
+    </div>
+    <div class="content-share mt-5 text-right">
+      <p class="small text-muted mb-1">Gostou deste perfil? Compartilhe meu CV:</p>
+      {% include share.liquid %}
     </div>
   </article>
 </div>
