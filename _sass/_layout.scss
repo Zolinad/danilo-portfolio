@@ -40,10 +40,17 @@ d-article {
   padding: 0.5rem 0 !important; // Evita que o scrollbar tape e corte frações
 }
 
-// Força o contêiner a ocupar a largura do celular
+// Força o contêiner a ocupar a largura do celular e permitir o scroll do conteúdo largo
 .mjx-container[display="true"] {
   min-width: 100% !important;
   width: 100% !important;
+  overflow-y: hidden !important; // Evita scroll vertical indesejado na equação
+}
+
+// Garante que o conteúdo interno (fórmulas) não encolha, forçando o scrollbar do pai
+.mjx-container[display="true"] > mjx-math,
+.mjx-container[jax="SVG"][display="true"] > svg {
+  min-width: max-content !important;
 }
 
 html {
