@@ -1,4 +1,4 @@
-<div class="share-container mb-2 text-right d-inline-block">
+<div class="share-container mb-2 text-left d-inline-block">
   <button class="share-btn" onclick="sharePage(this, '{{ page.title }}', '{{ page.url | absolute_url }}')" title="Compartilhar">
     <i class="fa-solid fa-share-alt"></i>
   </button>
@@ -82,7 +82,8 @@
     position: absolute;
     z-index: 1000;
     bottom: 125%;
-    right: 0;
+    right: auto;
+    left: 0;
     font-size: 0.8rem;
     white-space: nowrap;
     opacity: 0;
