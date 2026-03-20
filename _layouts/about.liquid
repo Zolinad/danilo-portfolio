@@ -34,6 +34,9 @@ layout: default
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
+          <div class="profile-share mt-2 text-center">
+            {% include share.liquid %}
+          </div>
         {% endif %}
       </div>
     {% endif %}
@@ -125,6 +128,9 @@ layout: default
               <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
           {% endif %}
+          <div class="d-inline-block ml-3">
+             {% include share.liquid %}
+          </div>
         </div>
 
         <div class="contact-note">{{ site.contact_note }}</div>
