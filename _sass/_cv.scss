@@ -60,7 +60,13 @@ a.btncv:hover {
 
 p.location {
   font-size: 0.7rem;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.location-text {
+  display: inline-block;
+  vertical-align: top;
 }
 
 i.iconlocation {

@@ -42,7 +42,7 @@
                   <td>
                     <p class="location">
                       <i class="fa-solid fa-location-dot iconlocation"></i>
-                      {{ loc_parts[0] }}{% if loc_parts.size > 1 %}<br>{{ loc_parts | slice: 1, loc_parts.size | join: ', ' }}{% endif %}
+                      <span class="location-text">{{ loc_parts[0] }}{% if loc_parts.size > 1 %}<br>{{ loc_parts | slice: 1, loc_parts.size | join: ', ' }}{% endif %}</span>
                     </p>
                   </td>
                 </tr>
