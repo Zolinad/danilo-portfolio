@@ -20,7 +20,7 @@ pagination:
 
   <div class="header-bar">
     <h1>Insights and Articles</h1>
-    <h2>a space for articles, research, technical advices and story telling</h2>
+    <h2>a space for technical articles, applied insights, and research-driven storytelling</h2>
   </div>
 
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}

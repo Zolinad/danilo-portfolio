@@ -7,9 +7,9 @@ first_name: Danilo
 middle_name: A.
 last_name: Figueiredo
 contact_note: >
-  Para entrar em contato comigo, envie um e-mail ou mensagem via LinkedIn ou Whatsapp.
+  To get in touch, send me an email or reach out via LinkedIn or WhatsApp.
 description: >
-  Cientista de Dados focado em Automação, BI, ETL e Machine Learning. Explore meu portfólio de projetos e artigos técnicos.
+  Data Scientist focused on Automation, BI, ETL, and Machine Learning. Explore my portfolio of projects and technical articles.
 # footer_text: >
 #   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -93,7 +93,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: danilo-portfolio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_description: essays, insights, and technical articles on data, automation, and decision systems
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

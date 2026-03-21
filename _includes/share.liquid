@@ -1,8 +1,8 @@
 <div class="share-container mb-2 text-left d-inline-block">
-  <button class="share-btn" onclick="sharePage(this, '{{ page.title }}', '{{ page.url | absolute_url }}')" title="Compartilhar">
+  <button class="share-btn" onclick="sharePage(this, '{{ page.title }}', '{{ page.url | absolute_url }}')" title="Share">
     <i class="fa-solid fa-share-alt"></i>
   </button>
-  <span class="share-toast">Link copiado!</span>
+  <span class="share-toast">Link copied!</span>
 </div>
 
 <script>
@@ -18,7 +18,7 @@
   }
 
   function fallbackCopy(btn, url) {
-    // Tenta primeiro com a API moderna
+    // Try the modern clipboard API first.
     if (navigator.clipboard) {
       navigator.clipboard.writeText(url)
         .then(() => showToast(btn))
@@ -37,7 +37,7 @@
       document.execCommand('copy');
       showToast(btn);
     } catch (err) {
-      console.error('Falha ao copiar', err);
+      console.error('Copy failed', err);
     }
     document.body.removeChild(textArea);
   }

@@ -2,10 +2,10 @@
 layout: page
 title: "Auditoria Financeira com Detecção de Anomalias"
 date: 2026-03-10
+permalink: /projects/auditoria-financeira-anomalias/
 description: "Pipeline de risco para priorizar transações suspeitas e reduzir ruído de investigação."
 img: assets/img/9.jpg
 importance: -2
-category: projects
 categories: [projects]
 tags: [auditoria, anomalia, risk-scoring, python]
 ---
