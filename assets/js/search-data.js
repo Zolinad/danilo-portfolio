@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "A growing collection of your cool projects.",
+          description: "Selected case studies and applied data products.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/danilo-portfolio/projects/";
@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Resumo da minha experiência profissional, formação, projetos e competências técnicas.",
+          description: "Summary of my professional experience, education, projects, and technical skills.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/danilo-portfolio/cv/";
@@ -159,12 +159,12 @@ ninja.data = [{
           title: 'Auditoria Financeira com Detecção de Anomalias',
           description: "Pipeline de risco para priorizar transações suspeitas e reduzir ruído de investigação.",
           section: "Projects",handler: () => {
-              window.location.href = "/danilo-portfolio/projects/10_auditoria-financeira-anomalias/";
+              window.location.href = "/danilo-portfolio/projects/auditoria-financeira-anomalias/";
             },},{id: "projects-dashboard-estratégico-de-kpis-hierárquicos",
           title: 'Dashboard Estratégico de KPIs Hierárquicos',
           description: "Arquitetura de indicadores para conectar operação, tática e estratégia em um único fluxo decisório.",
           section: "Projects",handler: () => {
-              window.location.href = "/danilo-portfolio/projects/11_dashboard-kpis-hierarquicos/";
+              window.location.href = "/danilo-portfolio/projects/dashboard-kpis-hierarquicos/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",

@@ -28,7 +28,7 @@
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{132--148}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{1905}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1002/andp.19053220607}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> </div> <div class="content-share mt-5 text-left"> <p class="small text-muted mb-1">Gostou? Compartilhe este conteúdo:</p> <div class="share-container mb-2 text-left d-inline-block"> <button class="share-btn" onclick="sharePage(this, 'publications', 'https://zolinad.github.io/danilo-portfolio/publications/')" title="Compartilhar"> <i class="fa-solid fa-share-alt"></i> </button> <span class="share-toast">Link copiado!</span> </div> <script>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> </div> <div class="content-share mt-5 text-left"> <p class="small text-muted mb-1">Enjoyed this page? Share it:</p> <div class="share-container mb-2 text-left d-inline-block"> <button class="share-btn" onclick="sharePage(this, 'publications', 'https://zolinad.github.io/danilo-portfolio/publications/')" title="Share"> <i class="fa-solid fa-share-alt"></i> </button> <span class="share-toast">Link copied!</span> </div> <script>
   function sharePage(btn, title, url) {
     if (navigator.share) {
       navigator.share({
@@ -41,7 +41,7 @@
   }
 
   function fallbackCopy(btn, url) {
-    // Tenta primeiro com a API moderna
+    // Try the modern clipboard API first.
     if (navigator.clipboard) {
       navigator.clipboard.writeText(url)
         .then(() => showToast(btn))
@@ -60,7 +60,7 @@
       document.execCommand('copy');
       showToast(btn);
     } catch (err) {
-      console.error('Falha ao copiar', err);
+      console.error('Copy failed', err);
     }
     document.body.removeChild(textArea);
   }
