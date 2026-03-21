@@ -1,81 +1,67 @@
-# Começando
+# Danilo A. Figueiredo Portfolio
 
-Importante: use **"Use this template"** (não faça fork).
+This repository contains the source code for my personal portfolio website.
 
-Ao criar seu site com o al-folio, você tem duas opções:
+The site brings together:
 
-## Recomendado: Use this template
+- selected data and automation projects
+- technical articles and short-form insights
+- curriculum vitae and academic/professional background
+- teaching, repositories, and contact channels
 
-Cria uma cópia limpa e independente do repositório original.
-Suas alterações não serão enviadas acidentalmente como pull requests para o projeto principal.
+The portfolio is built with Jekyll and based on the `al-folio` ecosystem, but this repository is no longer intended as a generic setup guide or template for other users. Its purpose is to maintain and publish my own website.
 
-## Não recomendado: Fork
+## Website
 
-Mantém vínculo com o repositório original (`alshedivat/al-folio`), aumentando o risco de enviar alterações pessoais como contribuições ao projeto oficial.
+- Production: <https://zolinad.github.io/danilo-portfolio/>
+- Local preview: `http://localhost:8080/danilo-portfolio/`
 
-### Se você já fez fork
+## Main Sections
 
-Sem problemas. Apenas:
+- `Home`: overview, profile, and quick navigation
+- `Projects`: applied work in data, analytics, ETL, automation, and machine learning
+- `Blog`: articles and insights on technical and professional topics
+- `CV`: experience, education, publications, and selected projects
+- `Teaching`: teaching-related activities and materials
+- `Repositories`: selected code repositories
+- `People`: collaborators and academic/professional connections
 
-- Trabalhe em uma branch própria (ex.: `meu-site-updates`)
-- Sempre confirme que está enviando para o seu repositório
-- Não abra pull requests para `alshedivat/al-folio`, a menos que queira contribuir com melhorias gerais
+## Stack
 
-Para configuração rápida, consulte **QUICKSTART.md**.
+- Jekyll
+- al-folio as the base theme/framework
+- Docker for local development
+- GitHub Pages for hosting
 
----
+## Local Development
 
-# Instalação e Deploy
+If you already have Docker running, start the local environment with:
 
-Consulte **INSTALL.md** para instruções completas de instalação e publicação.
+```bash
+docker compose up
+```
 
----
+Then open:
 
-# Customização
+```text
+http://localhost:8080/danilo-portfolio/
+```
 
-Consulte **CUSTOMIZE.md** para personalizar seu site (CV, publicações, blog, temas e layout).
+To test on another device in the same network, replace `localhost` with your machine's local IP.
 
----
+## Repository Scope
 
-# GitHub Copilot Agents
+This repository is focused on the portfolio itself:
 
-O repositório inclui dois agentes especializados:
+- content publishing
+- layout and visual refinements
+- CV and project presentation
+- writing and navigation structure
 
-## Customization Agent
+It is not maintained as a step-by-step onboarding guide for creating new al-folio websites.
 
-Ajuda a personalizar seu site:
+## Base Theme
 
-- Guia passo a passo nas configurações
-- Modifica arquivos diretamente no repositório
-- Explica conceitos técnicos de forma simples
-- Auxilia com CV, publicações, blog e temas
+This portfolio is built on top of `al-folio`:
 
-Consulte **CUSTOMIZE.md → GitHub Copilot Customization Agent**.
-
-## Documentation Agent
-
-Mantém a documentação organizada:
-
-- Atualiza arquivos quando há mudanças
-- Escreve em linguagem acessível
-- Segue boas práticas de documentação
-
-Consulte **CONTRIBUTING.md → GitHub Copilot Agents**.
-
-Observação: ambos exigem assinatura do GitHub Copilot.
-
----
-
-# Documentação
-
-Guias disponíveis:
-
-- Quick Start – Configure em poucos minutos
-- Instalação e Deploy – GitHub Pages e outras plataformas
-- Guia de Customização – CV, publicações, temas
-- Troubleshooting – Solução de problemas comuns
-- FAQ – Perguntas frequentes
-- Analytics – Monitoramento de visitantes
-- SEO Guide – Otimização para mecanismos de busca
-
----
+<https://github.com/alshedivat/al-folio>

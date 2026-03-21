@@ -34,7 +34,7 @@ d-article {
   display: block !important;
   position: relative !important;
   -webkit-overflow-scrolling: touch !important; 
-  touch-action: pan-x !important;
+  touch-action: pan-x pan-y !important;
   padding: 1.2rem 0 !important; 
   min-height: 1px;
   // border: 2px solid #28a745 !important; // DEBUG: Verde = Deve ter scroll
@@ -46,7 +46,7 @@ d-article {
   display: block !important;
   position: relative !important;
   -webkit-overflow-scrolling: touch !important;
-  touch-action: pan-x !important;
+  touch-action: pan-x pan-y !important;
   padding: 1.2rem 1rem !important;
   min-height: 1px;
 }
