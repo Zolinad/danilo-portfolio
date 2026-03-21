@@ -351,6 +351,11 @@ ul.task-list input[type="checkbox"] {
 
 // Home intro skill grid (about page)
 
+.home-mobile-cta-shell,
+.home-mobile-cta-group {
+  display: none;
+}
+
 .home-skill-grid {
   margin: 1.1rem 0 1.4rem;
 
@@ -387,6 +392,112 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media (max-width: 575.98px) {
+  .home-mobile-cta-shell {
+    display: block;
+    margin: 1.3rem 0 1.45rem;
+  }
+
+  .home-mobile-cta-kicker {
+    margin: 0 0 0.7rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+    opacity: 0.9;
+  }
+
+  .home-mobile-cta-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    justify-items: center;
+  }
+
+  .home-mobile-cta-link {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.82rem;
+    width: min(90%, 21rem);
+    min-height: 58px;
+    padding: 0.9rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 70%, transparent);
+    border-radius: 1.1rem;
+    background:
+      linear-gradient(315deg, color-mix(in srgb, var(--global-theme-color) 100%, #fff 0%) 0%, color-mix(in srgb, var(--global-theme-color) 78%, #0b1f4d 22%) 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.03rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    box-shadow:
+      0 14px 30px color-mix(in srgb, var(--global-theme-color) 26%, transparent),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    transition:
+      transform 120ms ease,
+      border-color 120ms ease,
+      background-color 120ms ease,
+      color 120ms ease,
+      box-shadow 120ms ease;
+    overflow: hidden;
+
+    .home-mobile-cta-icon {
+      width: 2rem;
+      height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    }
+
+    i {
+      font-size: 1rem;
+      color: inherit;
+    }
+
+    .home-mobile-cta-label {
+      text-wrap: balance;
+      text-align: left;
+      line-height: 1.15;
+    }
+
+    .home-mobile-cta-arrow {
+      opacity: 0.88;
+      font-size: 0.85rem;
+    }
+  }
+
+  .home-mobile-cta-link:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--global-theme-color) 88%, #fff 12%);
+    background:
+      linear-gradient(315deg, color-mix(in srgb, var(--global-theme-color) 100%, #fff 0%) 0%, color-mix(in srgb, var(--global-theme-color) 70%, #071633 30%) 100%);
+    color: #fff;
+    box-shadow:
+      0 16px 34px color-mix(in srgb, var(--global-theme-color) 34%, transparent),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    text-decoration: none;
+  }
+
+  .home-mobile-cta-link:active {
+    transform: translateY(0);
+  }
+
+  html:not([data-theme="dark"]) .home-mobile-cta-link {
+    color: var(--global-bg-color) !important;
+
+    .home-mobile-cta-icon,
+    .home-mobile-cta-label,
+    .home-mobile-cta-arrow,
+    i {
+      color: var(--global-bg-color) !important;
+    }
+  }
+
   .home-skill-grid .home-skill-item {
     min-height: 96px;
 
@@ -401,6 +512,10 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-mobile-cta-link {
+    transition: none;
+  }
+
   .home-skill-grid .home-skill-item {
     transition: none;
   }
