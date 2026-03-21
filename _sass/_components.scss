@@ -423,24 +423,20 @@ ul.task-list input[type="checkbox"] {
     width: min(90%, 21rem);
     min-height: 58px;
     padding: 0.9rem 1rem;
-    border: 1px solid color-mix(in srgb, var(--global-theme-color) 70%, transparent);
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 78%, transparent);
     border-radius: 1.1rem;
-    background:
-      linear-gradient(315deg, color-mix(in srgb, var(--global-theme-color) 100%, #fff 0%) 0%, color-mix(in srgb, var(--global-theme-color) 78%, #0b1f4d 22%) 100%);
-    color: #fff;
+    background: color-mix(in srgb, var(--global-theme-color) 10%, var(--global-bg-color));
+    color: var(--global-theme-color);
     font-weight: 600;
     font-size: 1.03rem;
     letter-spacing: 0.01em;
     text-decoration: none;
-    box-shadow:
-      0 14px 30px color-mix(in srgb, var(--global-theme-color) 26%, transparent),
-      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    -webkit-tap-highlight-color: transparent;
     transition:
-      transform 120ms ease,
-      border-color 120ms ease,
-      background-color 120ms ease,
-      color 120ms ease,
-      box-shadow 120ms ease;
+      transform 90ms ease,
+      border-color 90ms ease,
+      background-color 90ms ease,
+      color 90ms ease;
     overflow: hidden;
 
     .home-mobile-cta-icon {
@@ -450,8 +446,7 @@ ul.task-list input[type="checkbox"] {
       align-items: center;
       justify-content: center;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.14);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+      background: color-mix(in srgb, var(--global-theme-color) 12%, transparent);
     }
 
     i {
@@ -466,36 +461,23 @@ ul.task-list input[type="checkbox"] {
     }
 
     .home-mobile-cta-arrow {
-      opacity: 0.88;
+      opacity: 0.9;
       font-size: 0.85rem;
     }
   }
 
   .home-mobile-cta-link:hover {
     transform: translateY(-1px);
-    border-color: color-mix(in srgb, var(--global-theme-color) 88%, #fff 12%);
-    background:
-      linear-gradient(315deg, color-mix(in srgb, var(--global-theme-color) 100%, #fff 0%) 0%, color-mix(in srgb, var(--global-theme-color) 70%, #071633 30%) 100%);
-    color: #fff;
-    box-shadow:
-      0 16px 34px color-mix(in srgb, var(--global-theme-color) 34%, transparent),
-      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    border-color: var(--global-theme-color);
+    background: color-mix(in srgb, var(--global-theme-color) 16%, var(--global-bg-color));
+    color: var(--global-theme-color);
     text-decoration: none;
   }
 
   .home-mobile-cta-link:active {
-    transform: translateY(0);
-  }
-
-  html:not([data-theme="dark"]) .home-mobile-cta-link {
-    color: var(--global-bg-color) !important;
-
-    .home-mobile-cta-icon,
-    .home-mobile-cta-label,
-    .home-mobile-cta-arrow,
-    i {
-      color: var(--global-bg-color) !important;
-    }
+    transform: translateY(1px) scale(0.988);
+    border-color: color-mix(in srgb, var(--global-theme-color) 92%, transparent);
+    background: color-mix(in srgb, var(--global-theme-color) 22%, var(--global-bg-color));
   }
 
   .home-skill-grid .home-skill-item {
