@@ -16,6 +16,34 @@ html[data-theme="dark"] .cv {
   b {
     color: var(--global-theme-color) !important;
   }
+
+  .cv-project-title,
+  .cv-experience-title {
+    color: var(--global-theme-color);
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.cv-publication-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.38rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  text-decoration-color: color-mix(in srgb, var(--global-theme-color) 38%, transparent);
+
+  &:hover {
+    text-decoration-color: var(--global-theme-color);
+  }
+}
+
+.cv-publication-link-icon {
+  font-size: 0.72em;
+  opacity: 0.8;
 }
 
 div.container-link-button {

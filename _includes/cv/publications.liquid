@@ -26,11 +26,14 @@
           </div>
           <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
             {% if entry.url %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">
-                <a href="{{ entry.url }}">{{ entry.title | default: entry.name }}</a>
+              <h6 class="title font-weight-bold ml-1 ml-md-4 cv-publication-title">
+                <a class="cv-publication-link" href="{{ entry.url }}">
+                  {{ entry.title | default: entry.name }}
+                  <i class="fa-solid fa-arrow-up-right-from-square cv-publication-link-icon" aria-hidden="true"></i>
+                </a>
               </h6>
             {% elsif entry.title %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
+              <h6 class="title font-weight-bold ml-1 ml-md-4 cv-publication-title">{{ entry.title }}</h6>
             {% endif %}
 
             {% if entry.publisher %}
@@ -46,11 +49,14 @@
         {% else %}
           <div class="col-xs-12 col-sm-12 col-md-12">
             {% if entry.url %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">
-                <a href="{{ entry.url }}">{{ entry.title | default: entry.name }}</a>
+              <h6 class="title font-weight-bold ml-1 ml-md-4 cv-publication-title">
+                <a class="cv-publication-link" href="{{ entry.url }}">
+                  {{ entry.title | default: entry.name }}
+                  <i class="fa-solid fa-arrow-up-right-from-square cv-publication-link-icon" aria-hidden="true"></i>
+                </a>
               </h6>
             {% elsif entry.title %}
-              <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
+              <h6 class="title font-weight-bold ml-1 ml-md-4 cv-publication-title">{{ entry.title }}</h6>
             {% endif %}
 
             {% if entry.publisher %}
