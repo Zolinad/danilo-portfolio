@@ -11,6 +11,15 @@
 }
 
 html[data-theme="dark"] .cv {
+  color: color-mix(in srgb, var(--global-text-color) 88%, var(--global-cv-card-bg-color));
+
+  p,
+  li,
+  span,
+  td,
+  h6:not(.cv-project-title):not(.cv-experience-title):not(.cv-publication-title) {
+    color: color-mix(in srgb, var(--global-text-color) 88%, var(--global-cv-card-bg-color));
+  }
 
   strong,
   b {
