@@ -10,6 +10,14 @@
   }
 }
 
+html[data-theme="dark"] .cv {
+
+  strong,
+  b {
+    color: var(--global-theme-color) !important;
+  }
+}
+
 div.container-link-button {
   margin-right: 0.5rem;
 }

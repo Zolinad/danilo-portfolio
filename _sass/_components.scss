@@ -255,6 +255,11 @@ ul.task-list input[type="checkbox"] {
     justify-content: center;
     min-width: 4.1rem;
     min-height: 4.1rem;
+    border-radius: 999px;
+    transition:
+      transform 90ms ease,
+      background-color 90ms ease,
+      color 90ms ease;
   }
 
   a[data-contact-label]::after {
@@ -287,6 +292,7 @@ ul.task-list input[type="checkbox"] {
 
   a.is-pressed {
     transform: scale(0.94);
+    background: color-mix(in srgb, var(--global-theme-color) 14%, transparent);
   }
 
   a.is-pressed i::before {
