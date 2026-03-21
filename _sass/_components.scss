@@ -284,6 +284,14 @@ ul.task-list input[type="checkbox"] {
     opacity: 1;
     visibility: visible;
   }
+
+  a.is-pressed {
+    transform: scale(0.94);
+  }
+
+  a.is-pressed i::before {
+    color: var(--global-theme-color);
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -475,6 +483,12 @@ ul.task-list input[type="checkbox"] {
   }
 
   .home-mobile-cta-link:active {
+    transform: translateY(1px) scale(0.988);
+    border-color: color-mix(in srgb, var(--global-theme-color) 92%, transparent);
+    background: color-mix(in srgb, var(--global-theme-color) 22%, var(--global-bg-color));
+  }
+
+  .home-mobile-cta-link.is-pressed {
     transform: translateY(1px) scale(0.988);
     border-color: color-mix(in srgb, var(--global-theme-color) 92%, transparent);
     background: color-mix(in srgb, var(--global-theme-color) 22%, var(--global-bg-color));

@@ -99,3 +99,56 @@ Neste site você vai encontrar alguns projetos de minha autoria, postagens sobre
     </div>
   </div>
 </div>
+
+<script>
+  (() => {
+    const touchQuery = window.matchMedia("(pointer: coarse)");
+    if (!touchQuery.matches) return;
+
+    const pressedClass = "is-pressed";
+    const selector = ".home-mobile-cta-link, .social .contact-icons.contact-icons-custom > a";
+    const pressDelayMs = 110;
+
+    const applyPressedState = (element) => {
+      element.classList.add(pressedClass);
+      window.setTimeout(() => element.classList.remove(pressedClass), pressDelayMs + 140);
+    };
+
+    document.querySelectorAll(selector).forEach((element) => {
+      element.addEventListener(
+        "pointerdown",
+        (event) => {
+          if (event.pointerType !== "touch") return;
+          applyPressedState(element);
+        },
+        { passive: true }
+      );
+
+      element.addEventListener("click", (event) => {
+        if (!touchQuery.matches) return;
+        if (event.defaultPrevented) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+        const href = element.getAttribute("href");
+        if (!href || href.startsWith("#") || href.startsWith("javascript:")) return;
+
+        event.preventDefault();
+
+        const target = element.getAttribute("target");
+        const rel = element.getAttribute("rel") || "";
+
+        window.setTimeout(() => {
+          if (target === "_blank") {
+            const openedWindow = window.open(href, "_blank", rel.includes("noopener") ? "noopener" : undefined);
+            if (openedWindow && rel.includes("noreferrer")) {
+              openedWindow.opener = null;
+            }
+            return;
+          }
+
+          window.location.assign(href);
+        }, pressDelayMs);
+      });
+    });
+  })();
+</script>
