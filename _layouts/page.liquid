@@ -8,6 +8,24 @@ layout: default
   </style>
 {% endif %}
 
+{% assign previous_project = nil %}
+{% assign next_project = nil %}
+{% if page.url contains '/projects/' %}
+  {% assign ordered_projects = site.projects | sort: 'date' %}
+  {% for project_item in ordered_projects %}
+    {% if project_item.url == page.url %}
+      {% assign previous_project_index = forloop.index0 | minus: 1 %}
+      {% assign next_project_index = forloop.index0 | plus: 1 %}
+      {% if previous_project_index >= 0 %}
+        {% assign previous_project = ordered_projects[previous_project_index] %}
+      {% endif %}
+      {% if next_project_index < ordered_projects.size %}
+        {% assign next_project = ordered_projects[next_project_index] %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -67,6 +85,28 @@ layout: default
     <div class="publications">
       {% bibliography --cited_in_order %}
     </div>
+  {% endif %}
+
+  {% if page.url contains '/projects/' %}
+    {% if previous_project or next_project %}
+      <nav class="post-sequence-nav" aria-label="Project navigation">
+        {% if previous_project %}
+          <a class="post-sequence-link post-sequence-link-previous" href="{{ previous_project.url | relative_url }}">
+            <span class="post-sequence-symbol" aria-hidden="true"><</span>
+            <span>Previous</span>
+          </a>
+        {% endif %}
+        {% if previous_project and next_project %}
+          <span class="post-sequence-divider" aria-hidden="true">|</span>
+        {% endif %}
+        {% if next_project %}
+          <a class="post-sequence-link post-sequence-link-next" href="{{ next_project.url | relative_url }}">
+            <span>Next</span>
+            <span class="post-sequence-symbol" aria-hidden="true">></span>
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
   {% endif %}
 
   {% if site.giscus and page.giscus_comments %}

@@ -5,6 +5,8 @@ layout: default
 {% assign tags = page.tags | join: '' %}
 {% assign categories = page.categories | join: '' %}
 {% assign url_beginning = page.url | slice: 0, 6 %}
+{% assign previous_article = page.previous %}
+{% assign next_article = page.next %}
 
 {% if page._styles %}
   <!-- Page/Post style -->
@@ -95,6 +97,26 @@ layout: default
     {% if page.related_posts == null or page.related_posts %}
       {% include related_posts.liquid %}
     {% endif %}
+  {% endif %}
+
+  {% if previous_article or next_article %}
+    <nav class="post-sequence-nav" aria-label="Article navigation">
+      {% if previous_article %}
+        <a class="post-sequence-link post-sequence-link-previous" href="{{ previous_article.url | relative_url }}">
+          <span class="post-sequence-symbol" aria-hidden="true"><</span>
+          <span>Previous</span>
+        </a>
+      {% endif %}
+      {% if previous_article and next_article %}
+        <span class="post-sequence-divider" aria-hidden="true">|</span>
+      {% endif %}
+      {% if next_article %}
+        <a class="post-sequence-link post-sequence-link-next" href="{{ next_article.url | relative_url }}">
+          <span>Next</span>
+          <span class="post-sequence-symbol" aria-hidden="true">></span>
+        </a>
+      {% endif %}
+    </nav>
   {% endif %}
 
   {% if site.disqus_shortname and page.disqus_comments %}
