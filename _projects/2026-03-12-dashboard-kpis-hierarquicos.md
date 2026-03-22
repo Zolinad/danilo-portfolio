@@ -8,6 +8,7 @@ img: assets/img/10.jpg
 importance: -1
 categories: [projects]
 tags: [dashboard, bi, visualização-de-dados, estratégia]
+focus_areas: [data, analytics, green-belt]
 ---
 
 ## Contexto

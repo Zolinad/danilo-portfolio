@@ -8,6 +8,7 @@ img: assets/img/9.jpg
 importance: -2
 categories: [projects]
 tags: [auditoria, anomalia, risk-scoring, python]
+focus_areas: [data, analytics, machine-learning]
 ---
 
 ## Contexto

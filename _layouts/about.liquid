@@ -14,7 +14,7 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
-  <article>
+  <article class="about-home-content">
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
@@ -53,10 +53,12 @@ layout: default
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
+      <section class="home-latest-posts-section">
+      <h2 class="home-section-heading">
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
+      </section>
     {% endif %}
 
     <!-- Selected papers -->
@@ -69,7 +71,7 @@ layout: default
 
     <!-- Social -->
     {% if page.social %}
-      <div class="social">
+      <div class="social home-social-block">
         <div class="contact-icons contact-icons-custom">
           {% assign socials = site.data.socials %}
 
@@ -128,7 +130,7 @@ layout: default
               <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
           {% endif %}
-          <div class="d-inline-block ml-4">
+          <div class="d-inline-block ml-4 home-social-share-inline">
              {% include share.liquid %}
           </div>
         </div>
