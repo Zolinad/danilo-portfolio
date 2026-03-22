@@ -232,7 +232,21 @@
 }
 
 @media (max-width: 768px) {
+  .post-sequence-nav {
+    grid-template-columns: max-content auto max-content;
+    justify-content: center;
+    column-gap: 0.7rem;
+  }
+
   .post-sequence-link {
     font-size: 0.92rem;
+  }
+
+  .post-sequence-link-previous {
+    margin-right: 0;
+  }
+
+  .post-sequence-link-next {
+    margin-left: 0;
   }
 }
