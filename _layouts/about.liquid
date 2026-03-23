@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">
-  <!-- LAYOUT MOBILE (Side-by-side estrito conforme solicitado) -->
+  <!-- 1. HEADER MOBILE (Side-by-side) -->
   <header class="post-header mb-4 d-block d-md-none">
     {% if page.profile %}
       <div class="d-flex align-items-center justify-content-center flex-nowrap" style="gap: 1.5rem; max-width: 100%; overflow: hidden;">
@@ -26,58 +26,66 @@ layout: default
     {% endif %}
   </header>
 
-  <!-- LAYOUT DESKTOP (Recuperado do PRIMEIRO commit - e277ae9) -->
-  <header class="post-header d-none d-md-block">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <!-- Profile Desktop (Recuperado do Primeiro Commit) -->
-      <div class="profile d-none d-md-block float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+  <!-- 2. LAYOUT DESKTOP HERO & BIO (Imagem 1) -->
+  <div class="d-none d-md-block">
+    <article>
+      {% if page.profile %}
+        <div class="profile float-right ml-5 mb-4">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            <div style="width: 320px; height: 320px; overflow: hidden; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+               <img src="{{ profile_image_path | relative_url }}" style="width: 100%; height: 100%; object-fit: cover;" alt="Danilo A. Figueiredo">
+            </div>
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-
-      <!-- More Info Mobile below Hero (Ajuste para manter o layout mobile limpo) -->
-      <div class="d-md-none text-center mb-4">
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-        <!-- Mantendo as melhorias de share que o usuário validou no mobile -->
-        <div class="profile-share mt-2">
-           {% include share.liquid %}
+          {% if page.profile.more_info %}
+            <div class="more-info text-center mt-3" style="font-family: monospace; color: var(--global-text-color-light);">{{ page.profile.more_info }}</div>
+            <div class="profile-share mt-2 text-center">
+              {% include share.liquid %}
+            </div>
+          {% endif %}
         </div>
+      {% endif %}
+
+      <header class="post-header">
+        <h1 class="post-title" style="font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: -1px;">
+          {% if site.title == 'blank' %}
+            <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+            {{ site.last_name }}
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+        <p class="desc text-muted" style="font-size: 1.25rem; margin-bottom: 2.5rem;">{{ page.subtitle }}</p>
+      </header>
+
+      <div class="clearfix" style="font-size: 1.2rem; line-height: 1.7; text-align: justify; color: var(--global-text-color);">
+        {{ content }}
       </div>
-    {% endif %}
+    </article>
+  </div>
 
-    <div class="clearfix">{{ content }}</div>
+  <!-- 3. CONTEÚDO MOBILE BIO (Isolado) -->
+  <div class="d-md-none">
+    <article>
+      {% if page.profile %}
+        <div class="text-center mb-4">
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+          <div class="profile-share mt-2">
+             {% include share.liquid %}
+          </div>
+        </div>
+      {% endif %}
+      <div class="clearfix">{{ content }}</div>
+    </article>
+  </div>
 
+  <!-- 4. SEÇÕES COMUNS (News, Posts) -->
+  <article>
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
+      <h2 class="mt-5">
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
@@ -85,7 +93,7 @@ layout: default
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
+      <h2 class="mt-5 pt-4">
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
@@ -93,52 +101,72 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
+      <h2 class="mt-5">
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
-
-    <!-- Social (Desktop usa o original do primeiro commit, Mobile usa manual para manter layout horizontal se necessário) -->
-    <div class="d-none d-md-block">
-      {% if page.social %}
-        <div class="social">
-          <div class="contact-icons">{% social_links %}</div>
-          <div class="contact-note">{{ site.contact_note }}</div>
-        </div>
-      {% endif %}
-    </div>
-
-    <div class="d-md-none">
-       <!-- Bloco Social Mobile (Mantendo o layout horizontal customizado) -->
-       {% if page.social %}
-        <div class="social home-social-block">
-          <div class="contact-icons contact-icons-custom">
-            {% assign socials = site.data.socials %}
-            {% if socials.linkedin_username %}
-              <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn @{{ socials.linkedin_username }}" data-contact-label="@{{ socials.linkedin_username }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-            {% endif %}
-            {% if socials.github_username %}
-              <a href="https://github.com/{{ socials.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub @{{ socials.github_username }}" data-contact-label="@{{ socials.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            {% endif %}
-            {% if socials.lattes_id %}
-              <a href="http://lattes.cnpq.br/{{ socials.lattes_id }}" target="_blank" rel="noopener noreferrer" aria-label="Lattes" data-contact-label="Lattes"><i class="ai ai-lattes" aria-hidden="true"></i></a>
-            {% endif %}
-            <a href="https://wa.me/5591991071457" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +55 (91) 99107-1457" data-contact-label="+55 (91) 99107-1457"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            {% if socials.email %}
-              <a href="mailto:{{ socials.email }}" aria-label="Email {{ socials.email }}" data-contact-label="{{ socials.email }}"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-            {% endif %}
-            <div class="d-inline-block ml-3">
-               {% include share.liquid %}
-            </div>
-          </div>
-          <div class="contact-note">{{ site.contact_note }}</div>
-        </div>
-      {% endif %}
-    </div>
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
   </article>
+
+  <!-- 5. SOCIAL FOOTER (Sincronizado e no final) -->
+  
+  <!-- DESKTOP SOCIAL -->
+  <div class="d-none d-md-block">
+    {% if page.social %}
+      <div class="social mt-5 mb-5 text-center">
+        <div class="contact-icons d-flex justify-content-center align-items-center flex-wrap" style="font-size: 3.8rem; gap: 2.5rem;">
+          {% assign socials = site.data.socials %}
+          {% if socials.linkedin_username %}
+            <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if socials.github_username %}
+            <a href="https://github.com/{{ socials.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if socials.lattes_id %}
+            <a href="http://lattes.cnpq.br/{{ socials.lattes_id }}" target="_blank" rel="noopener noreferrer" aria-label="Lattes"><i class="ai ai-lattes" aria-hidden="true"></i></a>
+          {% endif %}
+          <a href="https://wa.me/5591991071457" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          {% if socials.email %}
+            <a href="mailto:{{ socials.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          {% endif %}
+          <div class="d-inline-block share-wrapper ml-3" style="font-size: 1.8rem; opacity: 0.7;">
+             {% include share.liquid %}
+          </div>
+        </div>
+        <div class="contact-note mt-4 text-muted" style="font-size: 1.1rem;">To get in touch, send me an email or reach out via LinkedIn or WhatsApp.</div>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- MOBILE SOCIAL -->
+  <div class="d-md-none">
+    {% if page.social %}
+      <div class="social home-social-block">
+        <div class="contact-icons contact-icons-custom">
+          {% assign socials = site.data.socials %}
+          {% if socials.linkedin_username %}
+            <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn @{{ socials.linkedin_username }}" data-contact-label="@{{ socials.linkedin_username }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if socials.github_username %}
+            <a href="https://github.com/{{ socials.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub @{{ socials.github_username }}" data-contact-label="@{{ socials.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if socials.lattes_id %}
+            <a href="http://lattes.cnpq.br/{{ socials.lattes_id }}" target="_blank" rel="noopener noreferrer" aria-label="Lattes" data-contact-label="Lattes"><i class="ai ai-lattes" aria-hidden="true"></i></a>
+          {% endif %}
+          <a href="https://wa.me/5591991071457" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +55 (91) 99107-1457" data-contact-label="+55 (91) 99107-1457"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          {% if socials.email %}
+            <a href="mailto:{{ socials.email }}" aria-label="Email {{ socials.email }}" data-contact-label="{{ socials.email }}"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          {% endif %}
+          <div class="d-inline-block ml-3">
+             {% include share.liquid %}
+          </div>
+        </div>
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+    {% include newsletter.liquid center=true %}
+  {% endif %}
 </div>
