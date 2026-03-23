@@ -28,7 +28,9 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
 
-      {% include navbar_nav.liquid %}
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        {% include navbar_nav.liquid %}
+      </div>
     </div>
   </nav>
   {% if site.enable_progressbar %}

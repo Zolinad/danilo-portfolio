@@ -1,5 +1,4 @@
-<div class="collapse navbar-collapse text-right" id="navbarNav">
-  <ul class="navbar-nav ml-auto flex-nowrap">
+<ul class="navbar-nav ml-auto flex-nowrap">
     {%- for p in site.pages -%}
       {%- if p.permalink == '/' -%}{%- assign about_title = p.title -%}{%- endif -%}
     {%- endfor -%}
@@ -35,7 +34,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              {{- p.title }}
+              {% if p.title == 'Insights & Articles' %}Insights{% elsif p.title == 'Repositories' %}GitHub{% else %}{{- p.title }}{% endif %}
               {%- if page.title == p.title or has_active_child -%}
                 <span class="sr-only">(current)</span>
               {%- endif -%}
@@ -66,7 +65,7 @@
               {%- assign url = p.url -%}
             {%- endif -%}
             <a class="nav-link" href="{{ url | relative_url }}">
-              {{- p.title }}
+              {% if p.title == 'Insights & Articles' %}Insights{% elsif p.title == 'Repositories' %}GitHub{% else %}{{- p.title }}{% endif %}
               {%- if page.url contains p.url -%}
                 <span class="sr-only">(current)</span>
               {%- endif -%}
@@ -84,4 +83,3 @@
       </li>
     {%- endif -%}
   </ul>
-</div>
