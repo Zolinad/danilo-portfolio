@@ -53,7 +53,7 @@ latest_posts:
     <div class="home-mobile-cta-grid-2x2">
       <a class="home-mobile-cta-card" href="{{ '/blog/' | relative_url }}">
         <i class="fa-regular fa-newspaper" aria-hidden="true"></i>
-        <span>Insights & Articles</span>
+        <span>Insights</span>
       </a>
       <a class="home-mobile-cta-card" href="{{ '/projects/' | relative_url }}">
         <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
@@ -61,7 +61,7 @@ latest_posts:
       </a>
       <a class="home-mobile-cta-card" href="{{ '/repositories/' | relative_url }}">
         <i class="fa-brands fa-github" aria-hidden="true"></i>
-        <span>Repositories</span>
+        <span>GitHub</span>
       </a>
       <a class="home-mobile-cta-card" href="{{ '/cv/' | relative_url }}">
         <i class="fa-regular fa-file-lines" aria-hidden="true"></i>

@@ -815,9 +815,8 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
       var(--bg-cta-grad-start) 0%,
       var(--bg-cta-grad-end) 100%
     );
-    color: var(--global-theme-color);
-    font-weight: 600;
-    font-size: 0.98rem;
+    font-size: 1.16rem; 
+    color: color-mix(in srgb, var(--global-theme-color) 75%, var(--global-text-color-light)); /* Suavizado */
     letter-spacing: 0.01em;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
@@ -865,8 +864,8 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
       var(--bg-cta-grad-start) 0%,
       var(--bg-cta-grad-end) 100%
     );
-    color: color-mix(in srgb, var(--global-text-color) 76%, transparent);
-    font-size: 0.88rem;
+    color: color-mix(in srgb, var(--global-text-color) 62%, var(--global-text-color-light)); /* Suavizado */
+    font-size: 1.04rem; 
     font-weight: 500;
     box-shadow: 0 var(--bg-cta-shadow-offset) var(--bg-cta-shadow-blur) var(--bg-cta-shadow-color);
 
@@ -1105,4 +1104,28 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
 
 .d2h-diff-table {
   position: relative;
+}
+
+/* Home Mobile CTA Refinements (Dark Mode) */
+html[data-theme="dark"] {
+  .home-mobile-cta-card {
+    background: transparent !important;
+    border: 0.5px solid color-mix(in srgb, var(--global-theme-color) 45%, transparent) !important;
+    box-shadow: none !important;
+    transition: transform 100ms ease, background-color 100ms ease !important;
+  }
+
+  /* Efeito de Toque Haptic (Escurecer para Black Piano) */
+  .home-mobile-cta-card:active,
+  .home-mobile-cta-card.is-pressed {
+    background: #050505 !important;
+    transform: scale(0.975);
+    border-color: color-mix(in srgb, var(--global-theme-color) 60%, transparent) !important;
+  }
+  /* Suavização das datas em Latest Posts (Corrigido para .news th) */
+  .news th {
+    color: color-mix(in srgb, var(--global-text-color-light) 40%, transparent) !important;
+    font-weight: 500 !important;
+    font-size: 0.92rem;
+  }
 }
