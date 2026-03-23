@@ -166,14 +166,12 @@ exclude:
   - archive-content/
   - bin/
   - CONTRIBUTING.md
-  - CUSTOMIZE.md
+  - docs/
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
   - lighthouse_results/
   - package.json
