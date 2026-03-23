@@ -1,0 +1,63 @@
+/*******************************************************************************
+ * Fluid Background Styles (Fase 1)
+ * implementation of deep tech atmosphere using CSS & SVG
+ ******************************************************************************/
+
+#background-fluido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-color: transparent;
+  pointer-events: none;
+
+  /* Layer 1: Base Technical Grid */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(var(--global-divider-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--global-divider-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: var(--bg-grid-opacity);
+  }
+
+  /* Layer 2: Gradient Glow Halos */
+  /* Glow halos removed to preserve original theme colors as requested */
+
+  /* Layer 3: Plexus Container (SVG Placeholder for Phase 2) */
+  #plexus-layer {
+    position: absolute;
+    inset: 0;
+    opacity: var(--bg-plexus-opacity);
+    z-index: 2;
+  }
+}
+
+/* Glassmorphism Utility Mixin */
+@mixin glass-effect {
+  background: var(--bg-glass-color);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--bg-glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Specific Adjustments (Fase 2) */
+@media (max-width: 576px) {
+
+  /* Applying Glassmorphism to Home Elements */
+  .home-mobile-cta-shell,
+  .home-skill-grid .home-skill-item,
+  .profile,
+  .home-latest-posts-section {
+    @include glass-effect;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+}

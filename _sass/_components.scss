@@ -561,9 +561,16 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
   display: none;
 }
 
-.home-mobile-cta-shell,
+.home-mobile-cta-shell {
+  display: block;
+  margin: 1.5rem 0 2rem;
+}
 .home-mobile-cta-group {
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .home-skill-grid {
@@ -671,7 +678,6 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
   }
 
   .home-mobile-cta-shell {
-    display: block;
     margin: 1rem 0 1.2rem;
   }
 
@@ -718,8 +724,8 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
     border-radius: 1.1rem;
     background: linear-gradient(
       180deg,
-      color-mix(in srgb, var(--global-bg-color) 56%, white) 0%,
-      color-mix(in srgb, var(--global-bg-color) 68%, var(--global-card-bg-color)) 100%
+      var(--bg-cta-grad-start) 0%,
+      var(--bg-cta-grad-end) 100%
     );
     color: var(--global-theme-color);
     font-weight: 600;
@@ -731,8 +737,9 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
       transform 90ms ease,
       border-color 90ms ease,
       background-color 90ms ease,
-      color 90ms ease;
-    overflow: hidden;
+      color 90ms ease,
+      box-shadow 90ms ease;
+    box-shadow: 0 var(--bg-cta-shadow-offset) var(--bg-cta-shadow-blur) var(--bg-cta-shadow-color);
 
     .home-mobile-cta-icon {
       width: 1.9rem;
@@ -765,11 +772,15 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
     gap: 0.58rem;
     border-radius: 0.82rem;
     border-color: color-mix(in srgb, var(--global-divider-color) 72%, transparent);
-    background: color-mix(in srgb, var(--global-bg-color) 82%, var(--global-card-bg-color));
+    background: linear-gradient(
+      180deg,
+      var(--bg-cta-grad-start) 0%,
+      var(--bg-cta-grad-end) 100%
+    );
     color: color-mix(in srgb, var(--global-text-color) 76%, transparent);
     font-size: 0.88rem;
     font-weight: 500;
-    box-shadow: 0 4px 10px rgba(17, 41, 63, 0.05);
+    box-shadow: 0 var(--bg-cta-shadow-offset) var(--bg-cta-shadow-blur) var(--bg-cta-shadow-color);
 
     .home-mobile-cta-icon {
       width: 1.55rem;

@@ -8,7 +8,7 @@ description: Data Scientist focused on Automation, BI, ETL, and Machine Learning
 
 profile:
   align: right
-  image: profile_pic_PB.png
+  image: profile_pic_PB.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Oriximiná / Belém, PA, Brasil</p>

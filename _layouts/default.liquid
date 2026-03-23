@@ -17,6 +17,13 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!-- Fluid Background (Fase 1) -->
+    <div id="background-fluido">
+      <div class="bg-glow cyan"></div>
+      <div class="bg-glow violet"></div>
+      <div id="plexus-layer"></div>
+    </div>
+
     <!-- Header -->
     {% include header.liquid %}
 

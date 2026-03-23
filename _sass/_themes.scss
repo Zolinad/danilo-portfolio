@@ -26,15 +26,24 @@
   --global-emphasis-color: #084e90;
   --global-emphasis-bg-color: #{v.$burgundy-tint-color};
   --global-navbar-bg-color: #bcccd6; //#ccd8e0 antes
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$black-color, "red", v.$space: rgb)},
-    #{color.channel(v.$black-color, "green", v.$space: rgb)},
-    #{color.channel(v.$black-color, "blue", v.$space: rgb)},
-    0.4
-  );
+  --global-back-to-top-bg-color: rgba(0, 0, 0, 0.4);
   --global-back-to-top-text-color: #{v.$white-color};
   --global-newsletter-bg-color: #{v.$white-color};
   --global-newsletter-text-color: #{v.$black-color};
+
+  /* Fluid Background Tokens (Subtle Theme Accents) */
+  --bg-glow-cyan: rgba(8, 78, 144, 0.03); /* Quase invisível */
+  --bg-glow-violet: rgba(8, 78, 144, 0.02);
+  --bg-grid-opacity: 0.08;
+  --bg-plexus-opacity: 0.3;
+  --bg-particles-opacity: 0.3;
+  --bg-glass-color: rgba(255, 255, 255, 0.1);
+  --bg-glass-border: rgba(8, 78, 144, 0.15);
+  --bg-cta-shadow-color: rgba(17, 41, 63, 0.12);
+  --bg-cta-shadow-blur: 12px;
+  --bg-cta-shadow-offset: 4px;
+  --bg-cta-grad-start: color-mix(in srgb, var(--global-bg-color) 56%, white); /* Original Light */
+  --bg-cta-grad-end: color-mix(in srgb, var(--global-bg-color) 68%, var(--global-card-bg-color)); /* Original Light */
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -92,16 +101,25 @@ html[data-theme="dark"] {
   --global-divider-color: #424246;
   --global-card-bg-color: #{v.$grey-900};
   --global-cv-card-bg-color: #2a2e33;
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$white-color, "red", v.$space: rgb)},
-    #{color.channel(v.$white-color, "green", v.$space: rgb)},
-    #{color.channel(v.$white-color, "blue", v.$space: rgb)},
-    0.5
-  );
+  --global-back-to-top-bg-color: rgba(255, 255, 255, 0.5);
   --global-back-to-top-text-color: #{v.$black-color};
   --global-newsletter-bg-color: #{v.$grey-color-light};
   --global-newsletter-text-color: #{v.$grey-color-dark};
   --global-navbar-bg-color: #{v.$grey-color-dark};
+
+  /* Fluid Background Tokens (Subtle Theme Accents) */
+  --bg-glow-cyan: rgba(38, 152, 186, 0.05); /* Mantém apenas um brilho periférico raro */
+  --bg-glow-violet: rgba(38, 152, 186, 0.03);
+  --bg-grid-opacity: 0.15;
+  --bg-plexus-opacity: 0.4;
+  --bg-particles-opacity: 0.4;
+  --bg-glass-color: rgba(0, 0, 0, 0.3);
+  --bg-glass-border: rgba(38, 152, 186, 0.1);
+  --bg-cta-shadow-color: rgba(0, 0, 0, 0.9); /* Sombra densa para relevo total */
+  --bg-cta-shadow-blur: 32px;
+  --bg-cta-shadow-offset: 8px;
+  --bg-cta-grad-start: color-mix(in srgb, var(--global-theme-color) 18%, white); 
+  --bg-cta-grad-end: color-mix(in srgb, var(--global-theme-color) 45%, var(--global-bg-color));
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #215d42;
