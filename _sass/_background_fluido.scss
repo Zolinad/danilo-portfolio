@@ -47,6 +47,17 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
 
+/* Profile Strict Avatar Settings */
+.strict-hero-avatar {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50% !important;
+  border: 2px solid white !important;
+  object-fit: cover !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* Mobile Specific Adjustments (Fase 2) */
 @media (max-width: 576px) {
 
