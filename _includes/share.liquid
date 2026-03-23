@@ -90,12 +90,12 @@
           case 'email': shareUrl = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`; break;
         }
         
-        // Reduzido para 200ms conforme solicitado para uma resposta mais rápida
+        // Reduzido para 150ms conforme solicitado para uma resposta ultra-rápida
         if (shareUrl) {
           setTimeout(() => {
             window.open(shareUrl, '_blank', 'noopener,noreferrer');
-            setTimeout(() => { if (el) el.classList.remove('clicked'); }, 200);
-          }, 200);
+            setTimeout(() => { if (el) el.classList.remove('clicked'); }, 150);
+          }, 150);
         }
       });
     }
