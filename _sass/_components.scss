@@ -959,15 +959,21 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
     vertical-align: top;
   }
 
-  .home-latest-posts-section .table th {
-    width: 28% !important;
-    font-size: 0.8rem;
-    color: var(--global-text-color);
+  .news th {
+    width: 25% !important;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--global-text-color-light);
+    vertical-align: top;
+    padding-top: 0.72rem;
   }
 
-  .home-latest-posts-section .news-title {
-    font-size: 0.95rem;
+  .news-title {
+    font-size: 1.05rem;
     line-height: 1.45;
+    color: var(--global-theme-color) !important; /* Restaurado azul do tema */
+    font-weight: 600; 
+    text-decoration: none;
   }
 
   .home-social-block {

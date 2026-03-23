@@ -251,3 +251,14 @@
     margin-left: 0;
   }
 }
+/* Suavização das datas nas páginas de arquivo (artigos, insights) */
+.archive th {
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--global-text-color-light);
+  vertical-align: top;
+}
+
+html[data-theme="dark"] .archive th {
+  color: color-mix(in srgb, var(--global-text-color-light) 55%, transparent);
+}
