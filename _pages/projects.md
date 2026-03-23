@@ -9,10 +9,6 @@ horizontal: false
 ---
 
 {% assign sorted_projects = site.projects | sort: "importance" %}
-{% assign data_projects = site.projects | where_exp: "project", "project.focus_areas contains 'data'" | sort: "importance" %}
-{% assign analytics_projects = site.projects | where_exp: "project", "project.focus_areas contains 'analytics'" | sort: "importance" %}
-{% assign ml_projects = site.projects | where_exp: "project", "project.focus_areas contains 'machine-learning'" | sort: "importance" %}
-{% assign green_belt_projects = site.projects | where_exp: "project", "project.focus_areas contains 'green-belt'" | sort: "importance" %}
 
 <section class="projects-focus-overview" aria-labelledby="projects-focus-title">
   <p class="projects-focus-kicker">Explore by focus</p>
@@ -44,48 +40,6 @@ horizontal: false
       <span class="projects-focus-card-copy">Process-oriented thinking, KPI governance, and continuous-improvement discipline.</span>
     </a>
   </div>
-</section>
-
-<section class="projects-focus-sections" aria-label="Project focus areas">
-  <section id="focus-data" class="projects-focus-section">
-    <h3>Data</h3>
-    <p>Projects where the main value comes from structuring data, improving consistency, and making downstream analysis trustworthy.</p>
-    <div class="projects-focus-links">
-      {% for project in data_projects %}
-        <a class="projects-focus-project-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section id="focus-analytics" class="projects-focus-section">
-    <h3>Analytics</h3>
-    <p>Work focused on KPI architecture, monitoring, prioritization, and faster diagnosis for operational decisions.</p>
-    <div class="projects-focus-links">
-      {% for project in analytics_projects %}
-        <a class="projects-focus-project-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section id="focus-machine-learning" class="projects-focus-section">
-    <h3>Machine Learning</h3>
-    <p>Projects that use modeling to reduce noise, rank risk, and surface actions that deserve attention first.</p>
-    <div class="projects-focus-links">
-      {% for project in ml_projects %}
-        <a class="projects-focus-project-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section id="focus-green-belt" class="projects-focus-section">
-    <h3>Green Belt</h3>
-    <p>Cases that reflect process discipline, hierarchical indicators, and a clearer path from deviation to action.</p>
-    <div class="projects-focus-links">
-      {% for project in green_belt_projects %}
-        <a class="projects-focus-project-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-      {% endfor %}
-    </div>
-  </section>
 </section>
 
 <div class="projects">

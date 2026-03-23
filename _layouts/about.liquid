@@ -56,9 +56,14 @@ layout: default
             {{ site.title }}
           {% endif %}
         </h1>
-        <p class="desc text-muted mt-0" style="font-size: 1.4rem; margin-bottom: 2.5rem; font-weight: 500;">
+        <p class="desc text-muted mt-0" style="font-size: 1.4rem; margin-bottom: 0.5rem; font-weight: 500;">
           Data Scientist | Automation Engineer
         </p>
+        {% if page.subtitle %}
+          <p class="welcome-note" style="font-size: 1.1rem; margin-bottom: 2.5rem; color: var(--global-text-color-light); font-weight: 500;">
+            {{ page.subtitle }}
+          </p>
+        {% endif %}
       </header>
 
       <div class="clearfix" style="font-size: 1.2rem; line-height: 1.7; text-align: justify; color: var(--global-text-color);">

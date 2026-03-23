@@ -193,3 +193,22 @@
     color: var(--global-hover-color);
   }
 }
+
+// Desktop: navbar mais larga e fonte maior
+@media (min-width: 768px) {
+  .navbar > .container {
+    max-width: 1200px;
+  }
+
+  .navbar {
+    padding: 0.5rem 1.5rem !important;
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.15rem;
+  }
+}
