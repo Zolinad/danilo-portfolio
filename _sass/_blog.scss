@@ -262,3 +262,35 @@
 html[data-theme="dark"] .archive th {
   color: color-mix(in srgb, var(--global-text-color-light) 55%, transparent);
 }
+
+/* Cor azul do tema e feedback háptico nos títulos de posts */
+.news-title,
+.post-link,
+.post-list a.post-title {
+  color: var(--global-theme-color) !important;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 100ms ease, opacity 100ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.post-list h1 {
+  font-size: 1.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-title:hover,
+.post-link:hover,
+.post-list a.post-title:hover {
+  text-decoration: underline;
+}
+
+.news-title:active,
+.news-title.is-pressed,
+.post-link:active,
+.post-link.is-pressed,
+.post-list a.post-title:active,
+.post-list a.post-title.is-pressed {
+  transform: scale(0.96);
+  opacity: 0.7;
+}

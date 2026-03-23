@@ -188,3 +188,12 @@ pagination:
 {% endif %}
 
 </div>
+
+<script>
+  document.querySelectorAll('.post-title').forEach(function(link) {
+    link.addEventListener('touchstart', function() {
+      link.classList.add('is-pressed');
+      setTimeout(function() { link.classList.remove('is-pressed'); }, 200);
+    }, { passive: true });
+  });
+</script>

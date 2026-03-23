@@ -1121,6 +1121,11 @@ html[data-theme="dark"] {
     transition: transform 100ms ease, background-color 100ms ease !important;
   }
 
+  /* Contorno cinza para Teaching e People (Grid 2x1) */
+  .home-mobile-cta-grid-2x1 .home-mobile-cta-card {
+    border-color: #1e2124 !important;
+  }
+
   /* Efeito de Toque Haptic (Escurecer para Black Piano) */
   .home-mobile-cta-card:active,
   .home-mobile-cta-card.is-pressed {
