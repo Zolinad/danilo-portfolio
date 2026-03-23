@@ -113,17 +113,17 @@ layout: default
         <div class="contact-icons d-flex justify-content-center align-items-center flex-wrap" style="font-size: 3.8rem; gap: 4rem;">
           {% assign socials = site.data.socials %}
           {% if socials.linkedin_username %}
-            <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
           {% endif %}
           {% if socials.github_username %}
-            <a href="https://github.com/{{ socials.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/{{ socials.github_username }}" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
           {% endif %}
           {% if socials.lattes_id %}
-            <a href="http://lattes.cnpq.br/{{ socials.lattes_id }}" target="_blank" rel="noopener noreferrer" aria-label="Lattes"><i class="ai ai-lattes" aria-hidden="true"></i></a>
+            <a href="http://lattes.cnpq.br/{{ socials.lattes_id }}" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="Lattes"><i class="ai ai-lattes" aria-hidden="true"></i></a>
           {% endif %}
-          <a href="https://wa.me/5591991071457" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://wa.me/5591991071457" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
           {% if socials.email %}
-            <a href="mailto:{{ socials.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            <a href="mailto:{{ socials.email }}" onclick="handleSocialClick(this.href, this); return false;" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
           {% endif %}
           <div class="d-inline-block share-wrapper ml-3" style="font-size: 1.8rem; opacity: 0.7;">
              {% include share.liquid %}
@@ -140,17 +140,17 @@ layout: default
         <div class="contact-icons contact-icons-custom">
           {% assign socials = site.data.socials %}
           {% if socials.linkedin_username %}
-            <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn @{{ socials.linkedin_username }}" data-contact-label="@{{ socials.linkedin_username }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn @{{ socials.linkedin_username }}" data-contact-label="@{{ socials.linkedin_username }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
           {% endif %}
           {% if socials.github_username %}
-            <a href="https://github.com/{{ socials.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub @{{ socials.github_username }}" data-contact-label="@{{ socials.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/{{ socials.github_username }}" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="GitHub @{{ socials.github_username }}" data-contact-label="@{{ socials.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
           {% endif %}
           {% if socials.lattes_id %}
-            <a href="http://lattes.cnpq.br/{{ socials.lattes_id }}" target="_blank" rel="noopener noreferrer" aria-label="Lattes" data-contact-label="Lattes"><i class="ai ai-lattes" aria-hidden="true"></i></a>
+            <a href="http://lattes.cnpq.br/{{ socials.lattes_id }}" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="Lattes" data-contact-label="Lattes"><i class="ai ai-lattes" aria-hidden="true"></i></a>
           {% endif %}
-          <a href="https://wa.me/5591991071457" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +55 (91) 99107-1457" data-contact-label="+55 (91) 99107-1457"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://wa.me/5591991071457" onclick="handleSocialClick(this.href, this); return false;" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +55 (91) 99107-1457" data-contact-label="+55 (91) 99107-1457"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
           {% if socials.email %}
-            <a href="mailto:{{ socials.email }}" aria-label="Email {{ socials.email }}" data-contact-label="{{ socials.email }}"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            <a href="mailto:{{ socials.email }}" onclick="handleSocialClick(this.href, this); return false;" aria-label="Email {{ socials.email }}" data-contact-label="{{ socials.email }}"><i class="fas fa-envelope" aria-hidden="true"></i></a>
           {% endif %}
           <div class="d-inline-block ml-3">
              {% include share.liquid %}
@@ -160,6 +160,29 @@ layout: default
       </div>
     {% endif %}
   </div>
+
+  <script>
+    function handleSocialClick(url, el) {
+      if (!el) return;
+      
+      // Feedback visual instantâneo (estilo háptico)
+      requestAnimationFrame(() => {
+        el.classList.add('is-pressed');
+        
+        // Delay de 150ms para que o cérebro processe o feedback visual do toque
+        setTimeout(() => {
+          if (url.startsWith('mailto:')) {
+            window.location.href = url;
+          } else {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+          
+          // Remove a classe após abrir (suave para quando o usuário volta à página)
+          setTimeout(() => el.classList.remove('is-pressed'), 250);
+        }, 150);
+      });
+    }
+  </script>
 
   {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
     {% include newsletter.liquid center=true %}

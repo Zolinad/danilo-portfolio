@@ -305,8 +305,8 @@ ul.task-list input[type="checkbox"] {
 
 .projects-focus-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
 }
 
 .projects-focus-card {
@@ -463,6 +463,13 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
     font-size: 4rem;
 
     a {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 90ms ease, background-color 90ms ease, color 90ms ease;
+      -webkit-tap-highlight-color: transparent;
+
       img {
         width: 3.2rem;
         height: 3.2rem;
@@ -487,75 +494,69 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
 
       &:hover {
         text-decoration: none;
-
         i::before {
           color: var(--global-theme-color);
         }
+      }
+
+      /* Feedback Visual Instantâneo (is-pressed via JS) */
+      &.is-pressed {
+        transform: scale(0.92) !important;
+        background: rgba(var(--global-theme-color-rgb), 0.2) !important;
+        transition: none !important;
+        border-radius: 999px;
+
+        i::before, i {
+          color: var(--global-theme-color) !important;
+        }
+      }
+
+      /* Legendas (Tooltips) */
+      &[data-contact-label]::after {
+        content: attr(data-contact-label);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 0.35rem;
+        padding: 0.2rem 0.45rem;
+        border-radius: 0.35rem;
+        background: var(--global-card-bg-color);
+        color: var(--global-text-color);
+        border: 1px solid var(--global-divider-color);
+        font-size: 0.7rem;
+        line-height: 1.1;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 120ms ease;
+        z-index: 5;
+      }
+
+      &:hover::after, &:focus-visible::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &.contact-icons-custom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+
+      a {
+        min-width: 4.1rem;
+        min-height: 4.1rem;
+        border-radius: 999px;
       }
     }
   }
 
   .contact-note {
     font-size: 0.8rem;
-  }
-}
-
-.social .contact-icons.contact-icons-custom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-
-  a {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 4.1rem;
-    min-height: 4.1rem;
-    border-radius: 999px;
-    transition:
-      transform 90ms ease,
-      background-color 90ms ease,
-      color 90ms ease;
-  }
-
-  a[data-contact-label]::after {
-    content: attr(data-contact-label);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 0.35rem;
-    padding: 0.2rem 0.45rem;
-    border-radius: 0.35rem;
-    background: var(--global-card-bg-color);
-    color: var(--global-text-color);
-    border: 1px solid var(--global-divider-color);
-    font-size: 0.7rem;
-    line-height: 1.1;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 120ms ease;
-    z-index: 5;
-  }
-
-  a[data-contact-label]:hover::after,
-  a[data-contact-label]:focus-visible::after {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  a.is-pressed {
-    transform: scale(0.94);
-    background: color-mix(in srgb, var(--global-theme-color) 14%, transparent);
-  }
-
-  a.is-pressed i::before {
-    color: var(--global-theme-color);
   }
 }
 
@@ -566,7 +567,7 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
 
   .projects-focus-grid,
   .projects-focus-sections {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .projects-focus-card {
@@ -702,10 +703,10 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
   }
 
   .post .post-header .post-title {
-    font-size: 2.35rem;
-    line-height: 1;
-    margin-bottom: 0.24rem;
-    letter-spacing: -0.03em;
+    font-size: 2.1rem;
+    line-height: 1.05;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.02em;
   }
 
   .post .post-header .desc {
