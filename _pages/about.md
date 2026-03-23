@@ -11,7 +11,7 @@ profile:
   image: profile_pic_PB.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Oriximiná / Belém, PA, Brasil</p>
+    <p>Oriximiná/Belém, PA, Brasil</p>
     <p>daniloz.fig@gmail.com</p>
 # <p><i class="fa-brands fa-whatsapp fa-lg" aria-hidden="true"></i> +55 (91) 99107-1457</p>
 
@@ -45,40 +45,45 @@ latest_posts:
   </p>
 </div>
 
-<section class="home-mobile-cta-shell d-md-none" aria-label="Primary site sections">
-  <p class="home-mobile-cta-kicker">Quick access</p>
-  <div class="home-mobile-cta-group">
-    <a class="home-mobile-cta-link" href="{{ '/blog/' | relative_url }}">
-      <span class="home-mobile-cta-icon"><i class="fa-regular fa-newspaper" aria-hidden="true"></i></span>
-      <span class="home-mobile-cta-label">Insights & Articles</span>
-      <span class="home-mobile-cta-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-    <a class="home-mobile-cta-link" href="{{ '/projects/' | relative_url }}">
-      <span class="home-mobile-cta-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span>
-      <span class="home-mobile-cta-label">Projects</span>
-      <span class="home-mobile-cta-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-    <a class="home-mobile-cta-link" href="{{ '/repositories/' | relative_url }}">
-      <span class="home-mobile-cta-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
-      <span class="home-mobile-cta-label">Repositories</span>
-      <span class="home-mobile-cta-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-    <a class="home-mobile-cta-link" href="{{ '/cv/' | relative_url }}">
-      <span class="home-mobile-cta-icon"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></span>
-      <span class="home-mobile-cta-label">CV</span>
-      <span class="home-mobile-cta-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-    <a class="home-mobile-cta-link" href="{{ '/teaching/' | relative_url }}">
-      <span class="home-mobile-cta-icon"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i></span>
-      <span class="home-mobile-cta-label">Teaching</span>
-      <span class="home-mobile-cta-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-    <a class="home-mobile-cta-link" href="{{ '/people/' | relative_url }}">
-      <span class="home-mobile-cta-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
-      <span class="home-mobile-cta-label">People</span>
-      <span class="home-mobile-cta-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
+<!-- CTA MOBILE (Estrutura em Blocos conforme Imagem) -->
+<section class="home-mobile-cta-section d-md-none" aria-label="Quick Navigation">
+  
+  <!-- Bloco Principal (2x2 Grid) -->
+  <div class="home-mobile-cta-shell mb-3">
+    <div class="home-mobile-cta-grid-2x2">
+      <a class="home-mobile-cta-card" href="{{ '/blog/' | relative_url }}">
+        <i class="fa-regular fa-newspaper" aria-hidden="true"></i>
+        <span>Insights & Articles</span>
+      </a>
+      <a class="home-mobile-cta-card" href="{{ '/projects/' | relative_url }}">
+        <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+        <span>Projects</span>
+      </a>
+      <a class="home-mobile-cta-card" href="{{ '/repositories/' | relative_url }}">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+        <span>Repositories</span>
+      </a>
+      <a class="home-mobile-cta-card" href="{{ '/cv/' | relative_url }}">
+        <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+        <span>CV</span>
+      </a>
+    </div>
   </div>
+
+  <!-- Bloco Secundário (2 Colunas) -->
+  <div class="home-mobile-cta-shell">
+    <div class="home-mobile-cta-grid-2x1">
+      <a class="home-mobile-cta-card" href="{{ '/teaching/' | relative_url }}">
+        <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+        <span>Teaching</span>
+      </a>
+      <a class="home-mobile-cta-card" href="{{ '/people/' | relative_url }}">
+        <i class="fa-solid fa-users" aria-hidden="true"></i>
+        <span>People</span>
+      </a>
+    </div>
+  </div>
+
 </section>
 
 <div class="home-skill-grid" aria-label="Core skills">
@@ -116,7 +121,7 @@ latest_posts:
     if (!touchQuery.matches) return;
 
     const pressedClass = "is-pressed";
-    const selector = ".home-mobile-cta-link, .social .contact-icons.contact-icons-custom > a";
+    const selector = ".home-mobile-cta-card, .social .contact-icons.contact-icons-custom > a";
     const pressDelayMs = 110;
 
     const applyPressedState = (element) => {

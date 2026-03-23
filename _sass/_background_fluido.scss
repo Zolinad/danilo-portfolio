@@ -53,22 +53,93 @@
   width: 140px;
   height: 140px;
   border-radius: 50% !important;
-  border: 2px solid white !important;
+  border: 1px solid var(--global-theme-color) !important;
   object-fit: cover !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Applying Glassmorphism to Strategic Elements (Global) */
+.home-mobile-cta-shell,
+.home-skill-grid .home-skill-item,
+.home-latest-posts-section,
+.social-contacts-block {
+  @include glass-effect;
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Brighter Light-Theme Background for Contacts Section (Matches CTA style) */
+html:not([data-theme="dark"]) .social-contacts-block {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Mobile Specific Adjustments (Fase 2) */
 @media (max-width: 576px) {
 
-  /* Applying Glassmorphism to Home Elements */
-  .home-mobile-cta-shell,
-  .home-skill-grid .home-skill-item,
-  .profile,
-  .home-latest-posts-section {
+  /* Mobile Specific Glass Elements */
+  .profile {
     @include glass-effect;
-    border-radius: 12px;
-    padding: 1rem;
+    border-radius: 16px;
+    padding: 1.25rem;
     margin-bottom: 2rem;
+  }
+
+  /* Grid Layouts for Mobile CTAs */
+  .home-mobile-cta-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+
+    /* Force specific theme border for principal CTAs */
+    .home-mobile-cta-card {
+      border: 1px solid var(--global-theme-color) !important;
+      -webkit-border-image: none !important;
+      border-image: none !important;
+    }
+  }
+
+  .home-mobile-cta-grid-2x1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .home-mobile-cta-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.85rem 0.75rem;
+    text-decoration: none !important;
+    color: var(--global-text-color) !important;
+    transition: transform 0.2s, background 0.2s;
+
+    i {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      margin-right: 0.75rem;
+      font-size: 1.1rem;
+      color: var(--global-theme-color);
+    }
+
+    span {
+      font-size: 0.90rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    &.is-pressed {
+      transform: scale(0.96);
+      background: rgba(255, 255, 255, 0.12);
+    }
   }
 }

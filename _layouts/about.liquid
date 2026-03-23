@@ -16,10 +16,10 @@ layout: default
           </div>
         </div>
         <div class="flex-grow-1 text-left">
-          <h1 class="post-title font-weight-bold mb-1" style="font-size: clamp(2.3rem, 7vw, 3.2rem); line-height: 1.1; margin-top: 0; color: var(--global-text-color);">
+          <h1 class="post-title font-weight-bold mb-1" style="font-size: clamp(2.0rem, 6vw, 2.7rem); line-height: 1.1; margin-top: 0; color: var(--global-text-color);">
             {{ site.first_name }} {{ site.middle_name }}<br>{{ site.last_name }}
           </h1>
-          <p class="desc m-0 text-muted" style="font-size: clamp(1rem, 3.8vw, 1.25rem); line-height: 1.2;">Data Scientist | Automation Engineer</p>
+          <p class="desc m-0 text-muted" style="font-size: clamp(0.95rem, 3.5vw, 1.15rem); line-height: 1.2;">Data Scientist | Automation Engineer</p>
         </div>
       </div>
     {% endif %}
@@ -29,16 +29,18 @@ layout: default
   <div class="d-none d-md-block">
     <article>
       {% if page.profile %}
-        <div class="profile float-right ml-5 mb-4">
+        <div class="profile float-right ml-5 mb-4 text-center" style="width: 320px;">
           {% if page.profile.image %}
             {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-            <div style="width: 320px; height: 320px; overflow: hidden; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <div style="width: 320px; height: 320px; overflow: hidden; border-radius: 50%; border: 1px solid var(--global-theme-color); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
                <img src="{{ profile_image_path | relative_url }}" style="width: 100%; height: 100%; object-fit: cover;" alt="Danilo A. Figueiredo">
             </div>
           {% endif %}
           {% if page.profile.more_info %}
-            <div class="more-info text-center mt-3" style="font-family: monospace; color: var(--global-text-color-light);">{{ page.profile.more_info }}</div>
-            <div class="profile-share mt-2 text-center">
+            <div class="more-info mt-3" style="font-family: monospace; color: var(--global-text-color-light);">
+              {{ page.profile.more_info }}
+            </div>
+            <div class="profile-share mt-2">
               {% include share.liquid %}
             </div>
           {% endif %}
@@ -54,7 +56,9 @@ layout: default
             {{ site.title }}
           {% endif %}
         </h1>
-        <p class="desc text-muted" style="font-size: 1.25rem; margin-bottom: 2.5rem;">{{ page.subtitle }}</p>
+        <p class="desc text-muted mt-0" style="font-size: 1.4rem; margin-bottom: 2.5rem; font-weight: 500;">
+          Data Scientist | Automation Engineer
+        </p>
       </header>
 
       <div class="clearfix" style="font-size: 1.2rem; line-height: 1.7; text-align: justify; color: var(--global-text-color);">
@@ -100,8 +104,8 @@ layout: default
   <!-- 5. SOCIAL FOOTER (Separado por Resolução) -->
   <div class="d-none d-md-block">
     {% if page.social %}
-      <div class="social mt-5 mb-5 text-center">
-        <div class="contact-icons d-flex justify-content-center align-items-center flex-wrap" style="font-size: 3.8rem; gap: 2.5rem;">
+      <div class="social mt-5 mb-5 text-center social-contacts-block">
+        <div class="contact-icons d-flex justify-content-center align-items-center flex-wrap" style="font-size: 3.8rem; gap: 4rem;">
           {% assign socials = site.data.socials %}
           {% if socials.linkedin_username %}
             <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
@@ -127,7 +131,7 @@ layout: default
 
   <div class="d-md-none">
     {% if page.social %}
-      <div class="social home-social-block">
+      <div class="social social-contacts-block">
         <div class="contact-icons contact-icons-custom">
           {% assign socials = site.data.socials %}
           {% if socials.linkedin_username %}

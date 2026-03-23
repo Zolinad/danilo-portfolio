@@ -8,8 +8,8 @@ footer.fixed-bottom {
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     text-align: center;
   }
 
@@ -28,17 +28,17 @@ footer.fixed-bottom {
     font-size: 0.69rem;
 
     .container {
-      padding-top: 7px;
-      padding-bottom: 7px;
+      padding-top: 2px;
+      padding-bottom: 2px;
     }
   }
 }
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 0.85rem;
 
   .container {
     text-align: center;
