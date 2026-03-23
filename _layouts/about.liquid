@@ -2,31 +2,30 @@
 layout: default
 ---
 <div class="post">
-  <!-- 1. HEADER MOBILE (Side-by-side) -->
-  <header class="post-header mb-4 d-block d-md-none">
+  <!-- 1. HEADER MOBILE (Side-by-side - Foto à Esquerda) -->
+  <header class="post-header mb-4 d-block d-md-none" style="padding-left: 8vw;">
     {% if page.profile %}
-      <div class="d-flex align-items-center justify-content-center flex-nowrap" style="gap: 1.5rem; max-width: 100%; overflow: hidden;">
+      <div class="d-flex align-items-center justify-content-start flex-nowrap" style="gap: 1.5rem; max-width: 100%; overflow: hidden;">
         <div class="flex-shrink-0">
-          {% if page.profile.image %}
-            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-            <img class="strict-hero-avatar" src="{{ profile_image_path | relative_url }}" alt="Danilo A. Figueiredo">
-          {% endif %}
+          <div class="hero-image-wrapper">
+            {% if page.profile.image %}
+              {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+              <img class="strict-hero-avatar" src="{{ profile_image_path | relative_url }}" alt="Danilo A. Figueiredo">
+            {% endif %}
+            <p class="m-0 mt-2 text-center welcome-note" style="font-size: 0.95rem; color: var(--global-text-color-light); font-weight: 500;">Welcome, visitor!</p>
+          </div>
         </div>
         <div class="flex-grow-1 text-left">
-          <h1 class="post-title font-weight-bold mb-1" style="font-size: clamp(1.80rem, 5vw, 2.5rem); line-height: 1.1; margin-top: 0; color: var(--global-text-color);">
-            {% if site.title == 'blank' %}
-              {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
-            {% else %}
-              {{ site.title }}
-            {% endif %}
+          <h1 class="post-title font-weight-bold mb-1" style="font-size: clamp(2.3rem, 7vw, 3.2rem); line-height: 1.1; margin-top: 0; color: var(--global-text-color);">
+            {{ site.first_name }} {{ site.middle_name }}<br>{{ site.last_name }}
           </h1>
-          <p class="desc m-0 text-muted" style="font-size: clamp(1rem, 3vw, 1.25rem);">{{ page.subtitle }}</p>
+          <p class="desc m-0 text-muted" style="font-size: clamp(1rem, 3.8vw, 1.25rem); line-height: 1.2;">Data Scientist | Automation Engineer</p>
         </div>
       </div>
     {% endif %}
   </header>
 
-  <!-- 2. LAYOUT DESKTOP HERO & BIO (Imagem 1) -->
+  <!-- 2. LAYOUT DESKTOP HERO & BIO (Sincronizado Imagem 1) -->
   <div class="d-none d-md-block">
     <article>
       {% if page.profile %}
@@ -64,24 +63,14 @@ layout: default
     </article>
   </div>
 
-  <!-- 3. CONTEÚDO MOBILE BIO (Isolado) -->
+  <!-- 3. CONTEÚDO MOBILE BIO (Ocultando more_info e share) -->
   <div class="d-md-none">
     <article>
-      {% if page.profile %}
-        <div class="text-center mb-4">
-          {% if page.profile.more_info %}
-            <div class="more-info">{{ page.profile.more_info }}</div>
-          {% endif %}
-          <div class="profile-share mt-2">
-             {% include share.liquid %}
-          </div>
-        </div>
-      {% endif %}
       <div class="clearfix">{{ content }}</div>
     </article>
   </div>
 
-  <!-- 4. SEÇÕES COMUNS (News, Posts) -->
+  <!-- 4. SEÇÕES COMUNS -->
   <article>
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -108,9 +97,7 @@ layout: default
     {% endif %}
   </article>
 
-  <!-- 5. SOCIAL FOOTER (Sincronizado e no final) -->
-  
-  <!-- DESKTOP SOCIAL -->
+  <!-- 5. SOCIAL FOOTER (Separado por Resolução) -->
   <div class="d-none d-md-block">
     {% if page.social %}
       <div class="social mt-5 mb-5 text-center">
@@ -138,7 +125,6 @@ layout: default
     {% endif %}
   </div>
 
-  <!-- MOBILE SOCIAL -->
   <div class="d-md-none">
     {% if page.social %}
       <div class="social home-social-block">
