@@ -174,7 +174,7 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .profile {
     width: 30%;
 
@@ -560,7 +560,7 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   .projects-focus-title {
     font-size: 1.55rem;
   }
@@ -697,7 +697,7 @@ html[data-theme="dark"] .home-latest-posts-section .table-responsive::-webkit-sc
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   .post .post-header {
     margin-bottom: 0.6rem;
   }

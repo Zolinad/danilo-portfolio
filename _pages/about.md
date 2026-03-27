@@ -87,7 +87,7 @@ latest_posts:
 </section>
 
 <div class="home-skill-grid d-md-none" aria-label="Core skills">
-  <div class="row g-2 g-sm-3">
+  <div class="row g-2 g-md-3">
     <div class="col-6 col-md-3">
       <div class="home-skill-item">
         <i class="fa-solid fa-database" aria-hidden="true"></i>

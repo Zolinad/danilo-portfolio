@@ -19,7 +19,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
       linear-gradient(var(--global-divider-color) 1px, transparent 1px),
       linear-gradient(90deg, var(--global-divider-color) 1px, transparent 1px);
     background-size: 50px 50px;
@@ -76,7 +76,7 @@ html:not([data-theme="dark"]) .social-contacts-block {
 }
 
 /* Mobile Specific Adjustments (Fase 2) */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 
   /* Mobile Specific Glass Elements */
   .profile {

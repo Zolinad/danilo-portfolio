@@ -11,7 +11,7 @@
         {% endcapture %}
 
         {% if start_date != '' %}
-          <div class="col-xs-2 col-sm-2 col-md-2 date-column">
+          <div class="col-xs-2 col-md-2 col-md-2 date-column">
             <table class="table-cv">
               <tbody>
                 <tr>
@@ -24,7 +24,7 @@
               </tbody>
             </table>
           </div>
-          <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+          <div class="col-xs-10 col-md-10 col-md-10 mt-2 mt-md-0">
             {% if entry.url %}
               <h6 class="title font-weight-bold ml-1 ml-md-4">
                 <a href="{{ entry.url }}">{{ entry.title }}</a>
@@ -42,7 +42,7 @@
             {% endif %}
           </div>
         {% else %}
-          <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="col-xs-12 col-md-12 col-md-12">
             {% if entry.url %}
               <h6 class="title font-weight-bold ml-1 ml-md-4">
                 <a href="{{ entry.url }}">{{ entry.title }}</a>
