@@ -34,7 +34,7 @@
   /* Fluid Background Tokens (Subtle Theme Accents) */
   --bg-glow-cyan: rgba(8, 78, 144, 0.03); /* Quase invisível */
   --bg-glow-violet: rgba(8, 78, 144, 0.02);
-  --bg-grid-opacity: 0.08;
+  --bg-grid-opacity: 0; /* Teste sem grade (antigo: 0.08) */
   --bg-plexus-opacity: 0.3;
   --bg-particles-opacity: 0.3;
   --bg-glass-color: rgba(255, 255, 255, 0.1);
@@ -110,7 +110,7 @@ html[data-theme="dark"] {
   /* Fluid Background Tokens (Subtle Theme Accents) */
   --bg-glow-cyan: rgba(38, 152, 186, 0.05); /* Mantém apenas um brilho periférico raro */
   --bg-glow-violet: rgba(38, 152, 186, 0.03);
-  --bg-grid-opacity: 0.15;
+  --bg-grid-opacity: 0; /* Teste sem grade (antigo: 0.15) */
   --bg-plexus-opacity: 0.4;
   --bg-particles-opacity: 0.4;
   --bg-glass-color: rgba(0, 0, 0, 0.3);
